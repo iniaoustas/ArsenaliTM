@@ -2383,12 +2383,14 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
 .detials_bg_1 {
-  background-image: url(../img/program_details/details_banner.png);
+  background-image: url(../img/program_details/resized/ΚΑΜ-ΕΞΩΤΕΡΙΚΟ-4_1920x1280.png);
+
 }
 
 /* line 4, ../../Arafath/CL/December/236. Event-02/HTML/scss/_program_details.scss */
 .program_details_area {
-  background-size: cover;
+  background-size: contain;
+  /*background-repeat: no-repeat;*/
   background-position: bottom center;
   padding: 150px 0;
 }
