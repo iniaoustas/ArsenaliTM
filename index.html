@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
   
@@ -34,55 +35,17 @@
 
 
 
-<style>
-.pulse-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 28px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-  background: #ff3d71;
-  border-radius: 50px;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  box-shadow: 0 0 0 rgba(255,61,113, 0.7);
-  animation: pulseButton 1.5s infinite;
-}
-@keyframes pulseButton {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,61,113,0.7); }
-  70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255,61,113,0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,61,113,0); }
-}
-</style>
-
 
 <style>
 #bg-video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;              /* shorthand for top/left/right/bottom 0 */
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.8; /* adjust for subtle effect */
-}
-</style>
-
-
-<style>
-.slider_area { position: relative; }
-#bg-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-  background: #000;
+  pointer-events: none;  /* let clicks pass through */
+  background: #000;      /* fallback if video fails */
 }
 </style>
 
@@ -133,14 +96,12 @@
     <div class="slider_area">
   <!-- Background Video -->
   
-  <!-- Background Video (robust for mobile) -->
-  <video id="bg-video" autoplay muted playsinline loop preload="metadata" poster="img/video-poster.jpg">
+  <!-- Background Video (Opera Android friendly) -->
+  <video autoplay muted loop playsinline preload="metadata" id="bg-video" poster="img/video-poster.jpg">
     <source src="video/background.webm" type="video/webm">
     <source src="video/background.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <noscript><img src="img/video-poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;"></noscript>
-
 
       <div class="single_slider d-flex align-items-center slider_bg_1 overlay">
         <div class="container">
@@ -243,34 +204,23 @@
   
 <script>
 (function(){
-  var v = document.getElementById('bg-video');
+  const v = document.getElementById('bg-video');
   if(!v) return;
-  v.muted = true;
-  v.setAttribute('muted','');
-  v.setAttribute('playsinline','');
-  v.playsInline = true;
-  v.autoplay = true;
-  function tryPlay(){
-    if(!v) return;
-    var p = v.play && v.play();
-    if (p && typeof p.catch === 'function') { p.catch(function(){ /* ignore */ }); }
-  }
+  try { v.muted = true; } catch(e){}
+  const tryPlay = () => v.play && v.play().catch(()=>{});
+  // Try immediately
   tryPlay();
-  v.addEventListener('canplaythrough', tryPlay, { once: true });
-  ['touchstart','click'].forEach(function(evt){
+  // Retry on first user interaction (tap/click)
+  ['touchstart','click'].forEach(evt => {
     document.addEventListener(evt, function onEvt(){
       tryPlay();
-      document.removeEventListener(evt, onEvt, { passive:true });
-    }, { once:true, passive:true });
+      document.removeEventListener(evt, onEvt, {passive:true});
+    }, {once:true, passive:true});
   });
-  document.addEventListener('visibilitychange', function(){
-    if(!document.hidden) tryPlay();
+  // Retry when tab becomes visible again
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) tryPlay();
   });
-  var attempts = 0, maxAttempts = 5;
-  var iv = setInterval(function(){
-    attempts++; tryPlay();
-    if (attempts >= maxAttempts) clearInterval(iv);
-  }, 1000);
 })();
 </script>
 
