@@ -5772,6 +5772,7 @@ h6 {
 }
 
 
+
 .pulse-button {
   display: inline-block;
   margin-top: 20px;
@@ -5786,10 +5787,13 @@ h6 {
   letter-spacing: 1px;
   box-shadow: 0 0 0 rgba(255,61,113, 0.7);
   animation: pulseButton 1.5s infinite;
-  white-space: normal;   /* ώστε να σπάει σε δύο γραμμές αν χρειαστεί */
-  text-align: center;
-  max-width: 90%;        /* ποτέ πάνω από 90% του πλάτους οθόνης */
 }
+@keyframes pulseButton {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,61,113,0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255,61,113,0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,61,113,0); }
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
