@@ -5782,7 +5782,7 @@ h6 {
   color: #fff;
   background: #ff3d71;
   border-radius: 50px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-decoration: none;
   letter-spacing: 1px;
   box-shadow: 0 0 0 rgba(255,61,113, 0.7);
