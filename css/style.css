@@ -5811,7 +5811,9 @@ h6 {
 }
 
 
-
+#countdown1 .value {
+  font-weight: normal !important;
+}
 
 
 
