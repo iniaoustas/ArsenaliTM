@@ -5810,10 +5810,25 @@ h6 {
   }
 }
 
-
-#countdown1 .value {
-  font-weight: normal !important;
+/* Countdown overrides */
+#countdown1 {
+  font-family: "Poppins", Arial, sans-serif !important; /* ή όποιο χρησιμοποιείς στο site */
 }
+
+#countdown1 .value,
+#countdown1 .label {
+  font-weight: 400 !important; /* normal */
+}
+
+#countdown1 h1,
+#countdown1 h2,
+#countdown1 h3,
+#countdown1 h4,
+#countdown1 h5,
+#countdown1 h6 {
+  font-weight: 400 !important;
+}
+
 
 
 
