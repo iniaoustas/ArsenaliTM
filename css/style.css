@@ -383,3 +383,17 @@ b,
 .update-badge {
   font-weight: 300;
 }
+
+/* DJ name highlight */
+.dj-name{
+  color: #5c9ead;        
+  font-size: 1.2rem;
+  font-weight: 400;        
+  letter-spacing: .2px;
+}
+
+/* timeline */
+.timeline .content .dj-name{
+  color: #a2528c;          /
+  font-size: 1.05rem;
+}
