@@ -394,6 +394,21 @@ b,
 
 /* timeline */
 .timeline .content .dj-name{
-  color: #a2528c;          /
+  color: #a2528c;          
   font-size: 1.05rem;
 }
+
+
+.timeline-day{
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: .75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.timeline-list{ list-style: none; padding: 0; margin: 0; }
+.timeline-item + .timeline-item{ margin-top: .75rem; }
+.dj-thumb{ width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 44px; }
+.dj-name{ color:#a2528c; font-size:1rem; font-weight:400; letter-spacing:.2px; }
+.time{ color:#b8c6cc; font-size:.95rem; margin-bottom:.25rem; }
