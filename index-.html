@@ -1,565 +1,1083 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arsenali TM26</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arsenali TM26</title>
 
-  <!-- Meta / SEO -->
-  <meta name="description" content="Arsenali TM26 — 4 Days Tango Marathon in Chania. Milongas, DJs, prácticas, brunch milonga.">
-  <meta name="keywords" content="Tango, Marathon, Milonga, Chania, Festival, 2026, Arsenali">
-  <meta name="author" content="Arsenali TM26 Team">
+    <!-- Meta / SEO -->
+    <meta
+      name="description"
+      content="Arsenali TM26 — 4 Days Tango Marathon in Chania. Milongas, DJs, prácticas, brunch milonga."
+    />
+    <meta
+      name="keywords"
+      content="Tango, Marathon, Milonga, Chania, Festival, 2026, Arsenali"
+    />
+    <meta name="author" content="Arsenali TM26 Team" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Arsenali TM26 — Tango Marathon 2026">
-  <meta property="og:description" content="Join us in Chania for 4 days of tango at the Megalo Arsenali.">
-  <meta property="og:image" content="img/cover.jpg">
-  <meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arsenali TM26 — Tango Marathon 2026" />
+    <meta
+      property="og:description"
+      content="Join us in Chania for 4 days of tango at the Megalo Arsenali."
+    />
+    <meta property="og:image" content="img/cover.jpg" />
+    <meta property="og:type" content="website" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Styles -->
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet" />
 
-  <style>
-    
-  </style>
+    <style></style>
 
-  <style>
-    .bg-video-fallback{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
-  </style>
-</head>
-<body class="bg-dark text-light">
-
-<!-- NAV -->
-<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <img src="img/logo.svg" alt="Arsenali TM26" height="80" class="d-inline-block align-text-top">
-      <span class="d-none d-sm-inline">Arsenali TM26</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto gap-lg-3">
-        <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#lineup">DJ’s</a></li>
-        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>        
-        <li class="nav-item"><a class="nav-link" href="#venue">Venue</a></li>
-        <li class="nav-item"><a class="nav-link" href="#tickets">Tickets</a></li>
-        <li class="nav-item"><a class="nav-link" href="accommodation.html">Accommodation</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-2" href="#register">Register</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header id="hero" class="position-relative overflow-hidden">
-  <video muted class="bg-video" autoplay loop playsinline preload="metadata" poster="img/LogoWhite.svg">
-    <source src="video/background.webm" type="video/webm">
-    <source src="video/background.mp4" type="video/mp4">
-  </video>
-  <noscript><img src="img/cover.jpg" alt="Background" class="bg-video-fallback"></noscript>
-  <div class="overlay"></div>
-  
-  <div class="container py-5 position-relative" style="z-index:2">
-    <div class="row min-vh-100 align-items-center text-center">
-      <div class="col-lg-10 mx-auto">
-        <span class="badge bg-light text-dark text-uppercase mb-3 date-badge">30 April — 03 May, 2026</span>
-        <h1 class="display-4 event-title">Arsenali</h1>
-		<h3>Tango Marathon</h3>
-        <p class="lead text-secondary mt-3">Non‑stop milongas, warm-up milonga, happenings.</p>
-        <div class="d-flex justify-content-center gap-2 mt-4">
-          <a href="#register" class="btn btn-primary btn-lg"><i class="bi bi-ticket-perforated me-2"></i>Register</a>
-          <a href="#schedule" class="btn btn-outline-light btn-lg"><i class="bi bi-calendar3 me-2"></i>See schedule</a>
-        </div>
-        <div id="countdown" class="d-flex justify-content-center gap-4 mt-5">
-          <div class="unit text-center"><div class="value" data-key="days">00</div><div class="label">Days</div></div>
-          <div class="unit text-center"><div class="value" data-key="hours">00</div><div class="label">Hours</div></div>
-          <div class="unit text-center"><div class="value" data-key="minutes">00</div><div class="label">Minutes</div></div>
-          <div class="unit text-center"><div class="value" data-key="seconds">00</div><div class="label">Sec</div></div>
-        </div>
-        <a href="#register" class="pulse-button mt-4">Registration opens on October 10th, 2025</a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ABOUT -->
-<section id="about" class="py-6 bg-blend">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <h2 class="h1 fw-bold">What is the Marathon</h2>
-        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae arcu sed nunc facilisis dictum.</p>
-        <ul class="list-unstyled small text-secondary">
-          <li>• 45+ hours dancing • Wooden floor • Brunch milonga</li>
-          <li>• 1:1 role balance • Photographer • Cozy lounge areas</li>
-        </ul>
-      </div>
-      <div class="col-lg-6">
-        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-          <img src="img/about.svg" class="w-100 h-100 object-fit-cover" alt="About the event">
-        </div>
-      </div>
-    </div>
-  </div>
-
-<section id="gallery" class="py-6 bg-blend">
-  <div class="container">
-    <h2 class="h1 text-center mb-5">Gallery</h2>
-
-    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-      
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="13" aria-label="Slide 14"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="14" aria-label="Slide 15"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="15" aria-label="Slide 16"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="16" aria-label="Slide 17"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="17" aria-label="Slide 18"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="18" aria-label="Slide 19"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="19" aria-label="Slide 20"></button>
-        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="20" aria-label="Slide 21"></button>
-      </div>
-
-      <!-- Slides -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/gallery/1 arsenali.jpg" class="d-block w-100" alt="Gallery 1">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/2 people.jpg" class="d-block w-100" alt="Gallery 2">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/3 people.jpg" class="d-block w-100" alt="Gallery 3">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/4 people.jpg" class="d-block w-100" alt="Gallery 4">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/5 people.jpg" class="d-block w-100" alt="Gallery 5">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/6 people.jpg" class="d-block w-100" alt="Gallery 6">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/7 people.jpg" class="d-block w-100" alt="Gallery 7">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/8 people.jpg" class="d-block w-100" alt="Gallery 8">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/9 people.jpg" class="d-block w-100" alt="Gallery 9">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/10 people.jpg" class="d-block w-100" alt="Gallery 10">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/11 people.jpg" class="d-block w-100" alt="Gallery 11">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/12 people.jpg" class="d-block w-100" alt="Gallery 12">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/13 people.jpg" class="d-block w-100" alt="Gallery 13">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/14 people.jpg" class="d-block w-100" alt="Gallery 14">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/15 people.jpg" class="d-block w-100" alt="Gallery 15">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/16 people.jpg" class="d-block w-100" alt="Gallery 16">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/17 people.jpg" class="d-block w-100" alt="Gallery 17">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/18 people.jpg" class="d-block w-100" alt="Gallery 18">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/19 people.jpg" class="d-block w-100" alt="Gallery 19">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/20 people.jpg" class="d-block w-100" alt="Gallery 20">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gallery/21 people.jpg" class="d-block w-100" alt="Gallery 21">
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- LINEUP (8 DJs) -->
-<section id="lineup" class="py-6 bg-darker bg-blend">
-  <div class="container">
-    <div class="d-flex align-items-end justify-content-between mb-4 flex-wrap gap-3">
-      <h2 class="h1 fw-bold m-0">DJ’s & Artists</h2>
-      <a href="#schedule" class="link-light text-decoration-none">See the program <i class="bi bi-arrow-right"></i></a>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/Tonia.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 1">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">Tonia Papadaki</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/JanTangο.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 2">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">Jan Tango</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/BabisPappas.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 3">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">Babis Pappas</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/MertEmreÜstün.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 4">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">Mert Emre Üstün</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/MichalShevchenko.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 5">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">Michal Shevchenko</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/SantiagoBuonomo.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 6">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">Santiago Buonomo</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-      <div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/JohnNiaou.jpg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 7">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">John Niaou</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>
-     <!--<div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
-  <img src="img/dj8.svg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 8">
-  <div class="card-body"><h5 class="card-title mb-1 dj-name">DJ 8</h5><p class="card-text text-secondary small">City, Country</p></div>
-</div></div>-->
-    </div>
-  </div>
-</section>
-
-<!-- SCHEDULE (timeline with 2 DJ slots per day) -->
-<section id="schedule" class="py-6 bg-blend">
-  <div class="container">
-    <h2 class="h1 fw-bold text-center mb-5">4-Day Schedule</h2>
-
-    <div class="row g-4"><!-- grid wrapper -->
-      <div class="col-md-6 col-lg-3">
-        <div class="timeline-day h-100">
-          <h5 class="mb-3">Thu 30/04</h5>
-          <ul class="timeline-list">
-            <li class="timeline-item">
-              <div class="time">16:00–22:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/Tonia.jpg" alt="DJ One" class="dj-thumb">
-                <span class="dj-name">Tonia</span>
-              </div>
+    <style>
+      .bg-video-fallback {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-light">
+    <!-- NAV -->
+    <nav
+      id="mainNav"
+      class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img
+            src="img/logo.svg"
+            alt="Arsenali TM26"
+            height="80"
+            class="d-inline-block align-text-top"
+          />
+          <span class="d-none d-sm-inline">Arsenali TM26</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#hero">Home</a>
             </li>
-            <li class="timeline-item">
-              <div class="time">22:00–03:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/JanTangο.jpg" alt="DJ Two" class="dj-thumb">
-                <span class="dj-name">Jan Tango</span>
-              </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lineup">DJ’s</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#schedule">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#venue">Venue</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tickets">Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accommodation.html">Accommodation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary btn-sm ms-lg-2" href="#register"
+                >Register</a
+              >
             </li>
           </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="col-md-6 col-lg-3">
-        <div class="timeline-day h-100">
-          <h5 class="mb-3">Fri 01/05</h5>
-          <ul class="timeline-list">
-            <li class="timeline-item">
-              <div class="time">16:00–22:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/dj3.svg" alt="DJ Three" class="dj-thumb">
-                <span class="dj-name">DJ Three</span>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="time">22:00–03:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/dj4.svg" alt="DJ Four" class="dj-thumb">
-                <span class="dj-name">DJ Four</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <!-- HERO -->
+    <header id="hero" class="position-relative overflow-hidden">
+      <video
+        muted
+        class="bg-video"
+        autoplay
+        loop
+        playsinline
+        preload="metadata"
+        poster="img/LogoWhite.svg"
+      >
+        <source src="video/background.webm" type="video/webm" />
+        <source src="video/background.mp4" type="video/mp4" />
+      </video>
+      <noscript
+        ><img src="img/cover.jpg" alt="Background" class="bg-video-fallback"
+      /></noscript>
+      <div class="overlay"></div>
 
-      <div class="col-md-6 col-lg-3">
-        <div class="timeline-day h-100">
-          <h5 class="mb-3">Sat 02/05</h5>
-          <ul class="timeline-list">
-            <li class="timeline-item">
-              <div class="time">16:00–22:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/dj5.svg" alt="DJ Five" class="dj-thumb">
-                <span class="dj-name">DJ Five</span>
+      <div class="container py-5 position-relative" style="z-index: 2">
+        <div class="row min-vh-100 align-items-center text-center">
+          <div class="col-lg-10 mx-auto">
+            <span
+              class="badge bg-light text-dark text-uppercase mb-3 date-badge"
+              >30 April — 03 May, 2026</span
+            >
+            <h1 class="display-4 event-title">Arsenali</h1>
+            <h3>Tango Marathon</h3>
+            <p class="lead text-secondary mt-3">
+              Non‑stop milongas, warm-up milonga, happenings.
+            </p>
+            <div class="d-flex justify-content-center gap-2 mt-4">
+              <a href="#register" class="btn btn-primary btn-lg"
+                ><i class="bi bi-ticket-perforated me-2"></i>Register</a
+              >
+              <a href="#schedule" class="btn btn-outline-light btn-lg"
+                ><i class="bi bi-calendar3 me-2"></i>See schedule</a
+              >
+            </div>
+            <div
+              id="countdown"
+              class="d-flex justify-content-center gap-4 mt-5"
+            >
+              <div class="unit text-center">
+                <div class="value" data-key="days">00</div>
+                <div class="label">Days</div>
               </div>
-            </li>
-            <li class="timeline-item">
-              <div class="time">22:00–03:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/dj6.svg" alt="DJ Six" class="dj-thumb">
-                <span class="dj-name">DJ Six</span>
+              <div class="unit text-center">
+                <div class="value" data-key="hours">00</div>
+                <div class="label">Hours</div>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="timeline-day h-100">
-          <h5 class="mb-3">Sun 03/05</h5>
-          <ul class="timeline-list">
-            <li class="timeline-item">
-              <div class="time">16:00–22:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/dj7.svg" alt="DJ Seven" class="dj-thumb">
-                <span class="dj-name">DJ Seven</span>
+              <div class="unit text-center">
+                <div class="value" data-key="minutes">00</div>
+                <div class="label">Minutes</div>
               </div>
-            </li>
-            <li class="timeline-item">
-              <div class="time">22:00–03:00</div>
-              <div class="content d-flex align-items-center gap-3">
-                <img src="img/dj8.svg" alt="DJ Eight" class="dj-thumb">
-                <span class="dj-name">DJ Eight</span>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div><!-- /row -->
-  </div>
-</section>
-
-
-<!-- TICKETS -->
-<section id="tickets" class="py-6 bg-darker bg-blend">
-  <div class="container">
-    <h2 class="h1 fw-bold text-center mb-5">Tickets & Passes</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2">
-        <div class="card-body d-flex flex-column"><h5 class="card-title">Full Pass</h5>
-        <div class="display-6 fw-bold">€95</div><p class="text-secondary small mt-2">All milongas & prácticas + brunch</p>
-        <a href="#register" class="btn btn-primary mt-auto">Book</a></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2">
-        <div class="card-body d-flex flex-column"><h5 class="card-title">Night Owl</h5>
-        <div class="display-6 fw-bold">€60</div><p class="text-secondary small mt-2">Evening milongas only (2)</p>
-        <a href="#register" class="btn btn-primary mt-auto">Book</a></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2">
-        <div class="card-body d-flex flex-column"><h5 class="card-title">Day Pass</h5>
-        <div class="display-6 fw-bold">€35</div><p class="text-secondary small mt-2">One‑day access + práctica</p>
-        <a href="#register" class="btn btn-primary mt-auto">Book</a></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- VENUE -->
-<section id="venue" class="py-6 bg-blend">
-  <div class="container">
-    <div class="row g-5 align-items-start">
-      <div class="col-lg-6">
-        <h2 class="h1 fw-bold">Venue & Access</h2>
-        <p class="text-secondary">Megalo Arsenali (Center of Mediterranean Architecture), Michail Afentoulief, Chania 731 32.</p>
-        <ul class="list-unstyled small text-secondary">
-          <li>• 3' from bus stop • 220 m² wooden floor • Accessible</li>
-        </ul>
-        <div class="d-flex gap-2">
-          <a href="#register" class="btn btn-primary"><i class="bi bi-ticket-perforated me-2"></i>Register</a>
-          <a href="https://maps.google.com" target="_blank" class="btn btn-outline-light"><i class="bi bi-geo-alt-fill me-2"></i>Directions</a>
-        </div>
-        <!-- Google Maps Navigation form -->
-        <div class="card bg-dark border-secondary rounded-4 shadow-sm mt-4">
-          <div class="card-body">
-            <h6 class="card-title mb-2">Navigate to Venue</h6>
-            <div class="row g-2 align-items-end">
-              <div class="col-md-8">
-                <label class="form-label small text-secondary">Your location (optional)</label>
-                <input type="text" id="gmaps-origin" class="form-control" placeholder="e.g. Syntagma, Athens">
-              </div>
-              <div class="col-md-4 d-grid">
-                <button type="button" id="gmaps-go" class="btn btn-primary">Open in Google Maps</button>
+              <div class="unit text-center">
+                <div class="value" data-key="seconds">00</div>
+                <div class="label">Sec</div>
               </div>
             </div>
-            <div class="small text-secondary mt-2">Destination: <span id="gmaps-destination">Μεγάλο Αρσενάλι, Μιχαήλ Αφεντουλιεφ, Χανιά 731 32 (35.518399,24.0197567)</span></div>
+            <a href="#register" class="pulse-button mt-4"
+              >Registration opens on October 10th, 2025</a
+            >
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow">
-          <img src="img/venue.svg" class="w-100 h-100 object-fit-cover" alt="Venue photo">
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-6 bg-blend">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 class="h1 fw-bold">What is the Marathon</h2>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              vitae arcu sed nunc facilisis dictum.
+            </p>
+            <ul class="list-unstyled small text-secondary">
+              <li>• 45+ hours dancing • Wooden floor • Brunch milonga</li>
+              <li>• 1:1 role balance • Photographer • Cozy lounge areas</li>
+            </ul>
+          </div>
+<div class="col-lg-6">
+  <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow d-flex align-items-center justify-content-center">
+    <img
+      src="img/logo.svg"
+      class="img-fluid object-fit-contain"
+      alt="About the event"
+    />
+  </div>
+</div>
+
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <section id="gallery" class="py-6 bg-blend">
+      <div class="container">
+        <h2 class="h1 text-center mb-5">Gallery</h2>
 
-<!-- REGISTER -->
-<section id="register" class="py-6 bg-darker bg-blend">
-  <div class="container text-center">
-    <h2 class="h1 fw-bold mb-4">Register</h2>
-    <p class="lead text-secondary">Registration will open on October 10th, 2025.</p>
-    <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary btn-lg mt-3">
-      <i class="bi bi-pencil-square me-2"></i>Go to Registration Form
-    </a>
-  </div>
-</section>
+        <div
+          id="galleryCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="6"
+              aria-label="Slide 7"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="7"
+              aria-label="Slide 8"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="8"
+              aria-label="Slide 9"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="9"
+              aria-label="Slide 10"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="10"
+              aria-label="Slide 11"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="11"
+              aria-label="Slide 12"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="12"
+              aria-label="Slide 13"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="13"
+              aria-label="Slide 14"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="14"
+              aria-label="Slide 15"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="15"
+              aria-label="Slide 16"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="16"
+              aria-label="Slide 17"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="17"
+              aria-label="Slide 18"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="18"
+              aria-label="Slide 19"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="19"
+              aria-label="Slide 20"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="20"
+              aria-label="Slide 21"
+            ></button>
+          </div>
 
-<!-- SPONSORS -->
-<section id="sponsors" class="py-6 bg-darker bg-blend">
-  <div class="container text-center">
-    <h2 class="h1 fw-bold mb-5">Our Sponsors</h2>
-    <div class="row g-4 justify-content-center align-items-center">
-      <div class="col-6 col-md-3"><img src="img/sponsor1.svg" class="sponsor-logo img-fluid" alt="Sponsor 1"></div>
-      <div class="col-6 col-md-3"><img src="img/sponsor2.svg" class="sponsor-logo img-fluid" alt="Sponsor 2"></div>
-      <div class="col-6 col-md-3"><img src="img/sponsor3.svg" class="sponsor-logo img-fluid" alt="Sponsor 3"></div>
-      <div class="col-6 col-md-3"><img src="img/sponsor4.svg" class="sponsor-logo img-fluid" alt="Sponsor 4"></div>
-    </div>
-  </div>
-</section>
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/gallery/1 arsenali.jpg"
+                class="d-block w-100"
+                alt="Gallery 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/2 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/3 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 3"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/4 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 4"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/5 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 5"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/6 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 6"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/7 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 7"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/8 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 8"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/9 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 9"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/10 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 10"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/11 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 11"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/12 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 12"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/13 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 13"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/14 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 14"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/15 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 15"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/16 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 16"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/17 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 17"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/18 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 18"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/19 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 19"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/20 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 20"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/gallery/21 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 21"
+              />
+            </div>
+          </div>
 
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
-<footer class="py-5 border-top border-secondary">
-  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between small text-secondary">
-    <div class="order-2 order-md-1">© <script>document.write(new Date().getFullYear());</script> Arsenali TM26 — All rights reserved.</div>
-    <div class="order-1 order-md-2 ms-md-auto text-md-end">
-      <a href="faq.html" class="link-light text-decoration-none me-3">FAQ</a>
-      <a href="contact.html" class="link-light text-decoration-none me-3">Contact</a>
-      <a href="terms.html" class="link-light text-decoration-none me-3">Terms &amp; Conditions</a>
-      <a href="gdpr.html" class="link-light text-decoration-none">GDPR</a>
-    </div>
-  </div>
-</footer>
+    <!-- LINEUP (8 DJs) -->
+    <section id="lineup" class="py-6 bg-darker bg-blend">
+      <div class="container">
+        <div
+          class="d-flex align-items-end justify-content-between mb-4 flex-wrap gap-3"
+        >
+          <h2 class="h1 fw-bold m-0">DJ’s & Artists</h2>
+          <a href="#schedule" class="link-light text-decoration-none"
+            >See the program <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/Tonia.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">Tonia Papadaki</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/JanTangο.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">Jan Tango</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/BabisPappas.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">Babis Pappas</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/MertEmreÜstün.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 4"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">Mert Emre Üstün</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/MichalShevchenko.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 5"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">Michal Shevchenko</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/SantiagoBuonomo.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 6"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">Santiago Buonomo</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
+            >
+              <img
+                src="img/JohnNiaou.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="DJ 7"
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-1 dj-name">John Niaou</h5>
+                <p class="card-text text-secondary small">City, Country</p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="col-md-6 col-lg-3 reveal-item"><div class="card bg-dark border-secondary h-100 shadow-sm rounded-4">
+  <img src="img/dj8.svg" class="card-img-top object-fit-cover" style="height:300px" alt="DJ 8">
+  <div class="card-body"><h5 class="card-title mb-1 dj-name">DJ 8</h5><p class="card-text text-secondary small">City, Country</p></div>
+</div></div>-->
+        </div>
+      </div>
+    </section>
 
+    <!-- SCHEDULE (timeline with 2 DJ slots per day) -->
+    <section id="schedule" class="py-6 bg-blend">
+      <div class="container">
+        <h2 class="h1 fw-bold text-center mb-5">4-Day Schedule</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-// Navbar solid on scroll
-(function(){
-  const nav = document.getElementById('mainNav');
-  function onScroll(){ if (window.scrollY > 10){ nav.classList.add('navbar-solid'); nav.classList.remove('bg-transparent'); } else { nav.classList.remove('navbar-solid'); nav.classList.add('bg-transparent'); } }
-  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-})();
+        <div class="row g-4">
+          <!-- grid wrapper -->
+          <div class="col-md-6 col-lg-3">
+            <div class="timeline-day h-100">
+              <h5 class="mb-3">Thu 30/04</h5>
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="time">16:00–22:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/Tonia.jpg" alt="DJ One" class="dj-thumb" />
+                    <span class="dj-name">Tonia</span>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="time">22:00–03:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/JanTangο.jpg" alt="DJ Two" class="dj-thumb" />
+                    <span class="dj-name">Jan Tango</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-// Countdown
-const target = new Date('2026-05-01T18:00:00+03:00').getTime();
-const el = document.getElementById('countdown');
-function pad(n){return String(n).padStart(2,'0');}
-setInterval(()=>{
-  const now = Date.now();
-  let diff = Math.max(0, target - now);
-  const d = Math.floor(diff/(1000*60*60*24)); diff -= d*24*60*60*1000;
-  const h = Math.floor(diff/(1000*60*60)); diff -= h*60*60*1000;
-  const m = Math.floor(diff/(1000*60)); diff -= m*60*1000;
-  const s = Math.floor(diff/1000);
-  el.querySelector('[data-key="days"]').textContent = pad(d);
-  el.querySelector('[data-key="hours"]').textContent = pad(h);
-  el.querySelector('[data-key="minutes"]').textContent = pad(m);
-  el.querySelector('[data-key="seconds"]').textContent = pad(s);
-}, 1000);
+          <div class="col-md-6 col-lg-3">
+            <div class="timeline-day h-100">
+              <h5 class="mb-3">Fri 01/05</h5>
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="time">16:00–22:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/dj3.svg" alt="DJ Three" class="dj-thumb" />
+                    <span class="dj-name">DJ Three</span>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="time">22:00–03:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/dj4.svg" alt="DJ Four" class="dj-thumb" />
+                    <span class="dj-name">DJ Four</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-// Google Maps nav
-(function(){
-  const btn = document.getElementById('gmaps-go');
-  if(!btn) return;
-  const destEl = document.getElementById('gmaps-destination');
-  const originEl = document.getElementById('gmaps-origin');
-  const DEST = destEl ? destEl.textContent.trim() : 'Chania, Greece';
-  btn.addEventListener('click', function(){
-    const origin = originEl && originEl.value.trim() ? originEl.value.trim() : '';
-    const url = new URL('https://www.google.com/maps/dir/');
-    url.searchParams.set('api', '1'); url.searchParams.set('destination', DEST);
-    if(origin) url.searchParams.set('origin', origin);
-    window.open(url.toString(), '_blank');
-  });
-})();
-</script>
+          <div class="col-md-6 col-lg-3">
+            <div class="timeline-day h-100">
+              <h5 class="mb-3">Sat 02/05</h5>
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="time">16:00–22:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/dj5.svg" alt="DJ Five" class="dj-thumb" />
+                    <span class="dj-name">DJ Five</span>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="time">22:00–03:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/dj6.svg" alt="DJ Six" class="dj-thumb" />
+                    <span class="dj-name">DJ Six</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center" style="display:none"><i class="bi bi-arrow-up"></i></a>
+          <div class="col-md-6 col-lg-3">
+            <div class="timeline-day h-100">
+              <h5 class="mb-3">Sun 03/05</h5>
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="time">16:00–22:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/dj7.svg" alt="DJ Seven" class="dj-thumb" />
+                    <span class="dj-name">DJ Seven</span>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <div class="time">22:00–03:00</div>
+                  <div class="content d-flex align-items-center gap-3">
+                    <img src="img/dj8.svg" alt="DJ Eight" class="dj-thumb" />
+                    <span class="dj-name">DJ Eight</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+    </section>
 
+    <!-- TICKETS -->
+    <section id="tickets" class="py-6 bg-darker bg-blend">
+      <div class="container">
+        <h2 class="h1 fw-bold text-center mb-5">Tickets & Passes</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2"
+            >
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Full Pass</h5>
+                <div class="display-6 fw-bold">€95</div>
+                <p class="text-secondary small mt-2">
+                  All milongas & prácticas + brunch
+                </p>
+                <a href="#register" class="btn btn-primary mt-auto">Book</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2"
+            >
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Night Owl</h5>
+                <div class="display-6 fw-bold">€60</div>
+                <p class="text-secondary small mt-2">
+                  Evening milongas only (2)
+                </p>
+                <a href="#register" class="btn btn-primary mt-auto">Book</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2"
+            >
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Day Pass</h5>
+                <div class="display-6 fw-bold">€35</div>
+                <p class="text-secondary small mt-2">
+                  One‑day access + práctica
+                </p>
+                <a href="#register" class="btn btn-primary mt-auto">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- VENUE -->
+    <section id="venue" class="py-6 bg-blend">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6">
+            <h2 class="h1 fw-bold">Venue & Access</h2>
+            <p class="text-secondary">
+              Megalo Arsenali (Center of Mediterranean Architecture), Michail
+              Afentoulief, Chania 731 32.
+            </p>
+            <ul class="list-unstyled small text-secondary">
+              <li>• 3' from bus stop • 220 m² wooden floor • Accessible</li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a href="#register" class="btn btn-primary"
+                ><i class="bi bi-ticket-perforated me-2"></i>Register</a
+              >
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                class="btn btn-outline-light"
+                ><i class="bi bi-geo-alt-fill me-2"></i>Directions</a
+              >
+            </div>
+            <!-- Google Maps Navigation form -->
+            <div class="card bg-dark border-secondary rounded-4 shadow-sm mt-4">
+              <div class="card-body">
+                <h6 class="card-title mb-2">Navigate to Venue</h6>
+                <div class="row g-2 align-items-end">
+                  <div class="col-md-8">
+                    <label class="form-label small text-secondary"
+                      >Your location (optional)</label
+                    >
+                    <input
+                      type="text"
+                      id="gmaps-origin"
+                      class="form-control"
+                      placeholder="e.g. Syntagma, Athens"
+                    />
+                  </div>
+                  <div class="col-md-4 d-grid">
+                    <button type="button" id="gmaps-go" class="btn btn-primary">
+                      Open in Google Maps
+                    </button>
+                  </div>
+                </div>
+                <div class="small text-secondary mt-2">
+                  Destination:
+                  <span id="gmaps-destination"
+                    >Μεγάλο Αρσενάλι, Μιχαήλ Αφεντουλιεφ, Χανιά 731 32
+                    (35.518399,24.0197567)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow">
+              <img
+                src="img/arsenali.jpg"
+                class="w-100 h-100 object-fit-cover"
+                alt="Venue photo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-(function(){
-  const items = document.querySelectorAll('#lineup .reveal-item');
-  if(!('IntersectionObserver' in window) || !items.length) return;
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target); } });
-  }, {root:null, rootMargin:'0px', threshold:0.15});
-  items.forEach(el=>io.observe(el));
-})();
-</script>
+    <!-- REGISTER -->
+    <section id="register" class="py-6 bg-darker bg-blend">
+      <div class="container text-center">
+        <h2 class="h1 fw-bold mb-4">Register</h2>
+        <p class="lead text-secondary">
+          Registration will open on October 10th, 2025.
+        </p>
+        <a
+          href="https://forms.gle/your-google-form-link"
+          target="_blank"
+          class="btn btn-primary btn-lg mt-3"
+        >
+          <i class="bi bi-pencil-square me-2"></i>Go to Registration Form
+        </a>
+      </div>
+    </section>
 
+    <!-- SPONSORS -->
+    <section id="sponsors" class="py-6 bg-darker bg-blend">
+      <div class="container text-center">
+        <h2 class="h1 fw-bold mb-5">Our Sponsors</h2>
+        <div class="row g-4 justify-content-center align-items-center">
+          <div class="col-6 col-md-3">
+            <img
+              src="img/sponsor1.svg"
+              class="sponsor-logo img-fluid"
+              alt="Sponsor 1"
+            />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="img/sponsor2.svg"
+              class="sponsor-logo img-fluid"
+              alt="Sponsor 2"
+            />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="img/sponsor3.svg"
+              class="sponsor-logo img-fluid"
+              alt="Sponsor 3"
+            />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="img/sponsor4.svg"
+              class="sponsor-logo img-fluid"
+              alt="Sponsor 4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <footer class="py-5 border-top border-secondary">
+      <div
+        class="container d-flex flex-column flex-md-row align-items-center justify-content-between small text-secondary"
+      >
+        <div class="order-2 order-md-1">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Arsenali TM26 — All rights reserved.
+        </div>
+        <div class="order-1 order-md-2 ms-md-auto text-md-end">
+          <a href="faq.html" class="link-light text-decoration-none me-3"
+            >FAQ</a
+          >
+          <a href="contact.html" class="link-light text-decoration-none me-3"
+            >Contact</a
+          >
+          <a href="terms.html" class="link-light text-decoration-none me-3"
+            >Terms &amp; Conditions</a
+          >
+          <a href="gdpr.html" class="link-light text-decoration-none">GDPR</a>
+        </div>
+      </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Navbar solid on scroll
+      (function () {
+        const nav = document.getElementById("mainNav");
+        function onScroll() {
+          if (window.scrollY > 10) {
+            nav.classList.add("navbar-solid");
+            nav.classList.remove("bg-transparent");
+          } else {
+            nav.classList.remove("navbar-solid");
+            nav.classList.add("bg-transparent");
+          }
+        }
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+      })();
 
-<script>
-(function(){
-  const btt = document.querySelector('.back-to-top');
-  if(!btt) return;
-  function heroThreshold(){
-    const hero = document.getElementById('hero');
-    return hero ? Math.max(0, hero.getBoundingClientRect().height) : 200;
-  }
-  function update(){
-    const show = window.scrollY > heroThreshold();
-    btt.style.display = show ? 'flex' : 'none';
-  }
-  ['scroll','resize','orientationchange'].forEach(ev=>window.addEventListener(ev, update, {passive:true}));
-  document.addEventListener('DOMContentLoaded', ()=>{ requestAnimationFrame(update); });
-  window.addEventListener('load', ()=>{ setTimeout(update, 50); });
-  update();
-  btt.addEventListener('click', (e)=>{ e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
-})();
-</script>
+      // Countdown
+      const target = new Date("2026-05-01T18:00:00+03:00").getTime();
+      const el = document.getElementById("countdown");
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+      setInterval(() => {
+        const now = Date.now();
+        let diff = Math.max(0, target - now);
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= d * 24 * 60 * 60 * 1000;
+        const h = Math.floor(diff / (1000 * 60 * 60));
+        diff -= h * 60 * 60 * 1000;
+        const m = Math.floor(diff / (1000 * 60));
+        diff -= m * 60 * 1000;
+        const s = Math.floor(diff / 1000);
+        el.querySelector('[data-key="days"]').textContent = pad(d);
+        el.querySelector('[data-key="hours"]').textContent = pad(h);
+        el.querySelector('[data-key="minutes"]').textContent = pad(m);
+        el.querySelector('[data-key="seconds"]').textContent = pad(s);
+      }, 1000);
 
+      // Google Maps nav
+      (function () {
+        const btn = document.getElementById("gmaps-go");
+        if (!btn) return;
+        const destEl = document.getElementById("gmaps-destination");
+        const originEl = document.getElementById("gmaps-origin");
+        const DEST = destEl ? destEl.textContent.trim() : "Chania, Greece";
+        btn.addEventListener("click", function () {
+          const origin =
+            originEl && originEl.value.trim() ? originEl.value.trim() : "";
+          const url = new URL("https://www.google.com/maps/dir/");
+          url.searchParams.set("api", "1");
+          url.searchParams.set("destination", DEST);
+          if (origin) url.searchParams.set("origin", origin);
+          window.open(url.toString(), "_blank");
+        });
+      })();
+    </script>
 
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      style="display: none"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
+    <script>
+      (function () {
+        const items = document.querySelectorAll("#lineup .reveal-item");
+        if (!("IntersectionObserver" in window) || !items.length) return;
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("revealed");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { root: null, rootMargin: "0px", threshold: 0.15 }
+        );
+        items.forEach((el) => io.observe(el));
+      })();
+    </script>
 
-
-
-
-</body>
+    <script>
+      (function () {
+        const btt = document.querySelector(".back-to-top");
+        if (!btt) return;
+        function heroThreshold() {
+          const hero = document.getElementById("hero");
+          return hero ? Math.max(0, hero.getBoundingClientRect().height) : 200;
+        }
+        function update() {
+          const show = window.scrollY > heroThreshold();
+          btt.style.display = show ? "flex" : "none";
+        }
+        ["scroll", "resize", "orientationchange"].forEach((ev) =>
+          window.addEventListener(ev, update, { passive: true })
+        );
+        document.addEventListener("DOMContentLoaded", () => {
+          requestAnimationFrame(update);
+        });
+        window.addEventListener("load", () => {
+          setTimeout(update, 50);
+        });
+        update();
+        btt.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
 </html>
