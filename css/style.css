@@ -132,8 +132,8 @@ h1, h2, h3, h4, h5, h6, .fw-bold, strong, b, .card-title, #countdown .unit .valu
   background: linear-gradient(180deg, rgba(47,97,112,.25), rgba(90,42,79,.20)), var(--darker);
 }
 #hero .overlay{
-  background: radial-gradient(ellipse at 30% 30%, rgba(47,97,112,.25), transparent 55%), 
-              linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.75));
+  background: radial-gradient(ellipse at 30% 30%, rgba(47,97,112,.15), transparent 55%), 
+              linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55));
 }
 
 /* Pulse button weight softer */
