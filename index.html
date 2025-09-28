@@ -1,137 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arsenali TM26 — Site Update</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arsenali TM26 — Site Update</title>
 
-  <!-- Fonts & CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Fonts & CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
 
-  <style>
-    /* Ensure hero logo size for this page */
-    .hero-logo{ max-height: 160px; margin-bottom: 1rem; }
-    @media (max-width:576px){ .hero-logo{ max-height: 120px; } }
-    .update-badge{ background: rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.2); font-size:1.25rem; padding:.9rem 1.25rem; }
-  
-    .update-badge{ font-weight:300; }
-  </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      /* Ensure hero logo size for this page */
+      .hero-logo {
+        max-height: 160px;
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 576px) {
+        .hero-logo {
+          max-height: 120px;
+        }
+      }
+      .update-badge {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 1.25rem;
+        padding: 0.9rem 1.25rem;
+      }
 
-  <style>
-    html, body { height: 100%; overflow: hidden; }
-    #hero { min-height: 100vh; }
-    #hero .container { padding-top: 0 !important; padding-bottom: 0 !important; }
-    .min-vh-100 { min-height: calc(100vh - 0px) !important; }
-  
-    .update-badge{ font-weight:300; }
-  </style>
+      .update-badge {
+        font-weight: 300;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <meta property="og:title" content="Arsenali TM26 — Tango Marathon">
-  <meta property="og:description" content="Non‑stop milongas, warm-up milonga, happenings.">
-  <meta property="og:image" content="img/about.svg">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Arsenali TM26 — Tango Marathon">
-  <meta name="twitter:description" content="Non‑stop milongas, warm-up milonga, happenings.">
-  <meta name="twitter:image" content="img/about.svg">
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      #hero {
+        min-height: 100vh;
+      }
+      #hero .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .min-vh-100 {
+        min-height: calc(100vh - 0px) !important;
+      }
 
+      .update-badge {
+        font-weight: 300;
+      }
+    </style>
 
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Arsenali TM26 — Tango Marathon" />
+    <meta
+      property="og:description"
+      content="Non‑stop milongas, warm-up milonga, happenings."
+    />
+    <meta property="og:image" content="img/about.svg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arsenali TM26 — Tango Marathon" />
+    <meta
+      name="twitter:description"
+      content="Non‑stop milongas, warm-up milonga, happenings."
+    />
+    <meta name="twitter:image" content="img/about.svg" />
 
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-  <style>
-    
-  </style>
+    <style></style>
 
-  <style>
-    .bg-video-fallback{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
-  </style>
-</head>
-<body class="bg-dark text-light">
+    <style>
+      .bg-video-fallback {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-light">
+    <header id="hero" class="position-relative overflow-hidden">
+      <video
+        muted
+        class="bg-video"
+        autoplay
+        loop
+        playsinline
+        preload="metadata"
+        poster="img/LogoWhite.svg"
+      >
+        <source src="video/background.webm" type="video/webm" />
+        <source src="video/background.mp4" type="video/mp4" />
+      </video>
+      <noscript
+        ><img src="img/cover.jpg" alt="Background" class="bg-video-fallback"
+      /></noscript>
+      <div class="overlay"></div>
 
-<header id="hero" class="position-relative overflow-hidden">
-  <video muted class="bg-video" autoplay loop playsinline preload="metadata" poster="img/LogoWhite.svg">
-    <source src="video/background.webm" type="video/webm">
-    <source src="video/background.mp4" type="video/mp4">
-  </video>
-  <noscript><img src="img/cover.jpg" alt="Background" class="bg-video-fallback"></noscript>
-  <div class="overlay"></div>
-  
-  <div class="container py-5 position-relative" style="z-index:2">
-    <div class="row min-vh-100 align-items-center text-center">
-      <div class="col-lg-10 mx-auto">
-        <span class="badge bg-light text-dark text-uppercase mb-3 date-badge">30 April — 03 May, 2026</span>
-        <h1 class="display-4 event-title">Arsenali</h1>
-		<h3>Tango Marathon</h3>
-        <p class="lead text-secondary mt-3">Non‑stop milongas, warm-up milonga, happenings.</p>
+      <div class="container py-5 position-relative" style="z-index: 2">
+        <div class="row min-vh-100 align-items-center text-center">
+          <div class="col-lg-10 mx-auto">
+            <span
+              class="badge bg-light text-dark text-uppercase mb-3 date-badge"
+              >30 April — 03 May, 2026</span
+            >
+            <h1 class="display-4 event-title">Arsenali</h1>
+            <h3>Tango Marathon</h3>
+            <p class="lead text-secondary mt-3">
+              Non‑stop milongas, warm-up milonga, happenings.
+            </p>
 
-        <!-- Update notice -->
-        <div class="d-flex justify-content-center">
-          <span class="badge update-badge rounded-pill px-3 py-2 mt-3">
-            Our site is being updated. Please check back soon.
-          </span>
+            <!-- Update notice -->
+            <div class="d-flex justify-content-center">
+              <span class="badge update-badge rounded-pill px-3 py-2 mt-3">
+                Our site is being updated.
+              </span>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+              <a href="#register" class="pulse-button"
+                >Registration opens on <br />October 10th, 2025</a
+              >
+            </div>
+
+            <div
+              id="countdown"
+              class="d-flex justify-content-center gap-4 mt-5"
+            >
+              <div class="unit text-center">
+                <div class="value" data-key="days">00</div>
+                <div class="label">Days</div>
+              </div>
+              <div class="unit text-center">
+                <div class="value" data-key="hours">00</div>
+                <div class="label">Hours</div>
+              </div>
+              <div class="unit text-center">
+                <div class="value" data-key="minutes">00</div>
+                <div class="label">Minutes</div>
+              </div>
+              <div class="unit text-center">
+                <div class="value" data-key="seconds">00</div>
+                <div class="label">Sec</div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="d-flex justify-content-center mt-4">
-  <a href="#register" class="pulse-button">Registration opens on October 10th, 2025</a>
-</div>
-
-        <div id="countdown" class="d-flex justify-content-center gap-4 mt-5">
-          <div class="unit text-center"><div class="value" data-key="days">00</div><div class="label">Days</div></div>
-          <div class="unit text-center"><div class="value" data-key="hours">00</div><div class="label">Hours</div></div>
-          <div class="unit text-center"><div class="value" data-key="minutes">00</div><div class="label">Minutes</div></div>
-          <div class="unit text-center"><div class="value" data-key="seconds">00</div><div class="label">Sec</div></div>
-        </div>
-
-        
       </div>
-    </div>
-  </div>
-</header>
+    </header>
 
-<script>
-// Countdown (same as main site)
-const target = new Date('2026-05-01T18:00:00+03:00').getTime();
-const el = document.getElementById('countdown');
-function pad(n){return String(n).padStart(2,'0');}
-setInterval(()=>{
-  const now = Date.now();
-  let diff = Math.max(0, target - now);
-  const d = Math.floor(diff/(1000*60*60*24)); diff -= d*24*60*60*1000;
-  const h = Math.floor(diff/(1000*60*60)); diff -= h*60*60*1000;
-  const m = Math.floor(diff/(1000*60)); diff -= m*60*1000;
-  const s = Math.floor(diff/1000);
-  el.querySelector('[data-key="days"]').textContent = pad(d);
-  el.querySelector('[data-key="hours"]').textContent = pad(h);
-  el.querySelector('[data-key="minutes"]').textContent = pad(m);
-  el.querySelector('[data-key="seconds"]').textContent = pad(s);
-}, 1000);
-</script>
+    <script>
+      // Countdown (same as main site)
+      const target = new Date("2026-05-01T18:00:00+03:00").getTime();
+      const el = document.getElementById("countdown");
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+      setInterval(() => {
+        const now = Date.now();
+        let diff = Math.max(0, target - now);
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= d * 24 * 60 * 60 * 1000;
+        const h = Math.floor(diff / (1000 * 60 * 60));
+        diff -= h * 60 * 60 * 1000;
+        const m = Math.floor(diff / (1000 * 60));
+        diff -= m * 60 * 1000;
+        const s = Math.floor(diff / 1000);
+        el.querySelector('[data-key="days"]').textContent = pad(d);
+        el.querySelector('[data-key="hours"]').textContent = pad(h);
+        el.querySelector('[data-key="minutes"]').textContent = pad(m);
+        el.querySelector('[data-key="seconds"]').textContent = pad(s);
+      }, 1000);
+    </script>
 
-
-
-
-<script>
-(function(){
-  const btt = document.querySelector('.back-to-top');
-  if(!btt) return;
-  window.addEventListener('scroll', () => {
-    const hero=document.getElementById('hero');const threshold=hero?hero.offsetHeight:200; if (window.scrollY > threshold) { btt.style.display='flex'; } else { btt.style.display='none'; }
-  }, {passive:true});
-  btt.addEventListener('click', (e)=>{
-    e.preventDefault();
-    window.scrollTo({top:0, behavior:'smooth'});
-  });
-})();
-</script>
-
-
-
-
-
-</body>
+    <script>
+      (function () {
+        const btt = document.querySelector(".back-to-top");
+        if (!btt) return;
+        window.addEventListener(
+          "scroll",
+          () => {
+            const hero = document.getElementById("hero");
+            const threshold = hero ? hero.offsetHeight : 200;
+            if (window.scrollY > threshold) {
+              btt.style.display = "flex";
+            } else {
+              btt.style.display = "none";
+            }
+          },
+          { passive: true }
+        );
+        btt.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
 </html>
