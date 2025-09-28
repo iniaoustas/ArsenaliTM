@@ -66,6 +66,20 @@
       }
     </style>
 
+    <style>
+  .tap-to-play {
+    position:absolute; inset:0; display:none; align-items:center; justify-content:center;
+    z-index:3; background: rgba(0,0,0,.35); backdrop-filter: blur(2px);
+    font: 500 1rem/1.2 Arial, sans-serif; color:#fff; cursor:pointer;
+  }
+  .tap-to-play .pill {
+    padding:.6rem 1rem; border-radius:999px;
+    background: linear-gradient(90deg, #5c9ead, #a2528c);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  }
+</style>
+
+
     <meta property="og:title" content="Arsenali TM26 — Tango Marathon" />
     <meta
       property="og:description"
@@ -99,16 +113,16 @@
   </head>
   <body class="bg-dark text-light">
     <header id="hero" class="position-relative overflow-hidden">
-      <video
-        muted
-        class="bg-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="img/LogoWhite.svg"
-      >
+     <video class="bg-video" autoplay muted playsinline loop preload="metadata" poster="img/img/LogoWhite.svg">
+  <source src="video/background.webm" type="video/webm">
+  <source src="video/background.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div id="videoOverlay" class="tap-to-play">
+  <div class="pill">Tap to play</div>
+</div>
+
+      
         <!--<source src="video/background.webm" type="video/webm" />-->
         <source src="video/background.mp4" type="video/mp4" />
       </video>
@@ -193,28 +207,55 @@
       }, 1000);
     </script>
 
+<script>
+(function(){
+  const btt = document.querySelector('.back-to-top');
+  function threshold(){
+    const h = document.getElementById('hero');
+    return h ? h.offsetHeight : 200;
+  }
+  function update(){
+    if(!btt) return;
+    btt.style.display = (window.scrollY > threshold()) ? 'flex' : 'none';
+  }
+  ['scroll','resize','orientationchange'].forEach(ev=>window.addEventListener(ev, update, {passive:true}));
+  document.addEventListener('DOMContentLoaded', update);
+  window.addEventListener('load', update);
+  update();
+})();
+</script>
+
+
+
     <script>
-      (function () {
-        const btt = document.querySelector(".back-to-top");
-        if (!btt) return;
-        window.addEventListener(
-          "scroll",
-          () => {
-            const hero = document.getElementById("hero");
-            const threshold = hero ? hero.offsetHeight : 200;
-            if (window.scrollY > threshold) {
-              btt.style.display = "flex";
-            } else {
-              btt.style.display = "none";
-            }
-          },
-          { passive: true }
-        );
-        btt.addEventListener("click", (e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-      })();
-    </script>
+/* TAP_TO_PLAY_OVERLAY */
+(function(){
+  const hero = document.getElementById('hero');
+  const video = hero ? hero.querySelector('video') : null;
+  const overlay = document.getElementById('videoOverlay');
+  if(!video || !overlay) return;
+
+  video.muted = true; // για autoplay policy
+
+  function showOverlay(){ overlay.style.display = 'flex'; }
+  function hideOverlay(){ overlay.style.display = 'none'; }
+
+  function tryAutoplay(){
+    const p = video.play();
+    if (p && typeof p.then === 'function'){
+      p.then(hideOverlay).catch(showOverlay);
+    } else {
+      if (video.paused) showOverlay(); else hideOverlay();
+    }
+  }
+
+  if (video.readyState >= 2) tryAutoplay();
+  else video.addEventListener('loadeddata', tryAutoplay, {once:true});
+  window.addEventListener('load', tryAutoplay);
+
+  overlay.addEventListener('click', ()=>{ video.play().then(hideOverlay).catch(showOverlay); });
+})();
+</script>
+
   </body>
 </html>
