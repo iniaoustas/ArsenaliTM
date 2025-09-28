@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accommodation — Arsenali TM26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hand-picked accommodation near the Arsenali TM26 Tango Marathon venue in Chania.">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Accommodation — Arsenali TM26">
+  <meta property="og:description" content="Hand-picked accommodation near the venue. Walking-distance picks, value stays, and partner hotels.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Accommodation — Arsenali TM26">
+  <meta name="twitter:description" content="Hand-picked accommodation near the venue.">
+  <meta name="twitter:image" content="img/cover.jpg">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap & Icons (match your other pages if already included there) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Site styles -->
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    /* Page-local tweaks (keeps site’s palette) */
+    :root{
+      --brand:#5c9ead; 
+      --brand-alt:#a2528c;
+      --brand-dark:#2f6170; 
+      --brand-alt-dark:#5a2a4f; 
+    }
+    body{ font-weight:400; }
+    .page-intro{
+      background: linear-gradient(180deg, rgba(47,97,112,.25), rgba(90,42,79,.20)), var(--darker, #0b0d10);
+    }
+    .pill-badge{
+      background: rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius: 999px;
+      padding:.35rem .75rem;
+      font-size:.9rem;
+      margin-right:.4rem;
+      white-space:nowrap;
+    }
+    .card.acco{
+      background: rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.12);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card.acco:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.28); }
+    .card.acco .thumb{
+      aspect-ratio: 16/9; object-fit: cover; width:100%;
+      background: #111;
+    }
+    .acco .badge-tier{
+      background: linear-gradient(90deg, var(--brand), var(--brand-alt));
+      border:0;
+    }
+    .section-title small{ color: #aaa; font-weight:300; }
+    .map-embed{ border:0; width:100%; height:380px; border-radius:1rem; }
+    .filters .btn{
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      padding:.4rem .9rem;
+    }
+    .filters .btn.active{
+      background: linear-gradient(90deg, var(--brand), var(--brand-alt));
+      border-color: transparent;
+      color:#fff;
+    }
+  </style>
+</head>
+<body class="bg-dark text-light">
+
+  <!-- NAVBAR (same as your site) -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" alt="Arsenali TM26" height="60" class="d-inline-block align-text-top">
+        <span class="d-none d-sm-inline">Arsenali TM26</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#lineup">DJ’s</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-2" href="index.html#register">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="height:72px"></div>
+
+  <!-- PAGE INTRO -->
+  <header class="page-intro py-6">
+    <div class="container">
+      <h1 class="display-5 mb-3">Accommodation</h1>
+      <p class="lead text-secondary mb-4">
+        Hand-picked places to stay within walking distance of the venue — plus a few great value options nearby.
+      </p>
+      <div class="filters d-flex flex-wrap gap-2">
+        <button class="btn btn-sm btn-light text-dark active" data-filter="all">All</button>
+        <button class="btn btn-sm btn-outline-light" data-filter="walk">Walking distance</button>
+        <button class="btn btn-sm btn-outline-light" data-filter="nearby">5–10 min</button>
+        <button class="btn btn-sm btn-outline-light" data-filter="value">Best value</button>
+        <button class="btn btn-sm btn-outline-light" data-filter="partner">Partner hotels</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="py-6 bg-blend" id="recommendations">
+    <div class="container">
+      <div class="d-flex align-items-baseline justify-content-between mb-4">
+        <h2 class="section-title h1 mb-0">Our picks <small class="ms-2">curated for convenience & comfort</small></h2>
+      </div>
+
+      <div class="row g-4" id="accoGrid">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4 acco-item" data-tags="walk partner">
+          <div class="card acco h-100">
+            <img src="img/accommodation1.jpg" alt="Hotel Artemis" class="thumb">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h3 class="h5 mb-0">Hotel Artemis</h3>
+                <span class="badge badge-tier">Partner</span>
+              </div>
+              <p class="text-secondary mb-3">Contemporary rooms, 2-minute walk from the venue. Quiet street, late check-in, excellent breakfast.</p>
+              <div class="d-flex flex-wrap mb-3">
+                <span class="pill-badge"><i class="bi bi-geo-alt"></i> 180 m</span>
+                <span class="pill-badge"><i class="bi bi-moon"></i> from €95</span>
+                <span class="pill-badge"><i class="bi bi-wifi"></i> Free Wi-Fi</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Book</a>
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-geo"></i> Get directions</a>
+              </div>
+              <p class="text-secondary mt-3 mb-0">Use code <span class="text-light">ARSENALI</span> for special rate.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4 acco-item" data-tags="walk value">
+          <div class="card acco h-100">
+            <img src="img/accommodation2.jpg" alt="Old Harbour Suites" class="thumb">
+            <div class="card-body">
+              <h3 class="h5">Old Harbour Suites</h3>
+              <p class="text-secondary mb-3">Cozy suites by the old harbour, with balconies and kitchenettes. Perfect for small groups.</p>
+              <div class="d-flex flex-wrap mb-3">
+                <span class="pill-badge"><i class="bi bi-geo-alt"></i> 350 m</span>
+                <span class="pill-badge"><i class="bi bi-moon"></i> from €80</span>
+                <span class="pill-badge"><i class="bi bi-cup-hot"></i> Kitchenette</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Book</a>
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-geo"></i> Get directions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4 acco-item" data-tags="nearby value">
+          <div class="card acco h-100">
+            <img src="img/accommodation3.jpg" alt="Agora Boutique Rooms" class="thumb">
+            <div class="card-body">
+              <h3 class="h5">Agora Boutique Rooms</h3>
+              <p class="text-secondary mb-3">Stylish boutique rooms near the municipal market. Cafés and bakeries right downstairs.</p>
+              <div class="d-flex flex-wrap mb-3">
+                <span class="pill-badge"><i class="bi bi-geo-alt"></i> 8 min</span>
+                <span class="pill-badge"><i class="bi bi-moon"></i> from €85</span>
+                <span class="pill-badge"><i class="bi bi-snow2"></i> A/C</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Book</a>
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-geo"></i> Get directions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-4 acco-item" data-tags="walk">
+          <div class="card acco h-100">
+            <img src="img/accommodation4.jpg" alt="Venetian Courtyard House" class="thumb">
+            <div class="card-body">
+              <h3 class="h5">Venetian Courtyard House</h3>
+              <p class="text-secondary mb-3">Traditional house with inner courtyard. Quiet charm, excellent for longer stays.</p>
+              <div class="d-flex flex-wrap mb-3">
+                <span class="pill-badge"><i class="bi bi-geo-alt"></i> 4 min</span>
+                <span class="pill-badge"><i class="bi bi-people"></i> up to 4 guests</span>
+                <span class="pill-badge"><i class="bi bi-lamp"></i> Ambient</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Book</a>
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-geo"></i> Get directions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-lg-4 acco-item" data-tags="nearby">
+          <div class="card acco h-100">
+            <img src="img/accommodation5.jpg" alt="Nea Chora Beach Rooms" class="thumb">
+            <div class="card-body">
+              <h3 class="h5">Nea Chora Beach Rooms</h3>
+              <p class="text-secondary mb-3">Sea breeze and sunsets, with quick access to the venue by a pleasant seaside walk.</p>
+              <div class="d-flex flex-wrap mb-3">
+                <span class="pill-badge"><i class="bi bi-geo-alt"></i> 10–12 min</span>
+                <span class="pill-badge"><i class="bi bi-water"></i> Sea view</span>
+                <span class="pill-badge"><i class="bi bi-moon"></i> from €70</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Book</a>
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-geo"></i> Get directions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-lg-4 acco-item" data-tags="partner nearby">
+          <div class="card acco h-100">
+            <img src="img/accommodation6.jpg" alt="Grand Port Hotel" class="thumb">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h3 class="h5 mb-0">Grand Port Hotel</h3>
+                <span class="badge badge-tier">Partner</span>
+              </div>
+              <p class="text-secondary mb-3">Full-service hotel with 24/7 desk, gym and late breakfast. Smooth logistics for groups.</p>
+              <div class="d-flex flex-wrap mb-3">
+                <span class="pill-badge"><i class="bi bi-geo-alt"></i> 7 min</span>
+                <span class="pill-badge"><i class="bi bi-moon"></i> from €110</span>
+                <span class="pill-badge"><i class="bi bi-bag"></i> Luggage hold</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Book</a>
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-geo"></i> Get directions</a>
+              </div>
+              <p class="text-secondary mt-3 mb-0">Promo: <span class="text-light">ARSENALI</span> (limited availability).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Helpful notes -->
+      <div class="alert alert-dark border-secondary mt-4 mb-0" role="alert" style="background:rgba(255,255,255,.03);">
+        <i class="bi bi-info-circle me-2"></i>
+        Distances are on foot from the venue (Μεγάλο Αρσενάλι, Χανιά). Rates are indicative and may vary by date/availability.
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP (anchor for directions) -->
+  <section class="py-6 bg-blend">
+    <div class="container">
+      <h2 class="h3 mb-3">Venue & area map</h2>
+      <!-- Replace the src with your exact embedded map if desired -->
+      <iframe class="map-embed"
+        src="https://www.google.com/maps?q=Μεγάλο+Αρσενάλι,+Χανιά+731+32&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER (same line links, right-aligned) -->
+  <footer class="py-5 border-top border-secondary">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between small text-secondary">
+      <div class="order-2 order-md-1">© <script>document.write(new Date().getFullYear());</script> Arsenali TM26 — All rights reserved.</div>
+      <div class="order-1 order-md-2 ms-md-auto text-md-end">
+        <a href="faq.html" class="link-light text-decoration-none me-3">FAQ</a>
+        <a href="contact.html" class="link-light text-decoration-none me-3">Contact</a>
+        <a href="terms.html" class="link-light text-decoration-none me-3">Terms &amp; Conditions</a>
+        <a href="gdpr.html" class="link-light text-decoration-none">GDPR</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Solid navbar on scroll (matches your site behavior)
+    (function(){
+      const nav = document.getElementById('mainNav'); if(!nav) return;
+      function onScroll(){
+        if(window.scrollY>10){ nav.classList.add('navbar-solid'); nav.classList.remove('bg-transparent'); }
+        else { nav.classList.remove('navbar-solid'); nav.classList.add('bg-transparent'); }
+      }
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+
+    // Simple front-end filter (client-side, optional)
+    (function(){
+      const grid = document.getElementById('accoGrid'); if(!grid) return;
+      const items = [...grid.querySelectorAll('.acco-item')];
+      const buttons = document.querySelectorAll('.filters .btn');
+      buttons.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          buttons.forEach(b=>b.classList.remove('active','btn-light','text-dark'));
+          buttons.forEach(b=>b.classList.add('btn-outline-light'));
+          btn.classList.add('active'); 
+          btn.classList.remove('btn-outline-light'); 
+          if(btn.dataset.filter === 'all'){
+            items.forEach(i=>i.classList.remove('d-none'));
+          }else{
+            const tag = btn.dataset.filter;
+            items.forEach(i=>{
+              const tags = (i.getAttribute('data-tags')||'').split(' ');
+              i.classList.toggle('d-none', !tags.includes(tag));
+            });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
