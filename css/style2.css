@@ -1,0 +1,460 @@
+@font-face {
+  font-family: "Italiana";
+  src: url("../fonts/Italiana-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fredoka";
+  src: url("../fonts/Fredoka-VariableFont.ttf") format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Fredoka", Arial, sans-serif;
+}
+.event-title {
+  font-family: "Italiana", serif;
+  font-size: 6.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+@media (max-width: 576px) {
+  .event-title {
+    font-size: 3.6rem;
+  }
+}
+
+:root {
+  --brand: #5c9ead;
+  --brand-alt: #a2528c;
+  --brand-dark: #2f6170;
+  --brand-alt-dark: #5a2a4f;
+  --darker: #0b0d10;
+}
+.bg-darker {
+  background: var(--darker);
+}
+.py-6 {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.fw-extrabold {
+  font-weight: 900;
+}
+
+/* Typography: Italiana for title, Aptos for body */
+
+@media (max-width: 576px) {
+}
+
+/* Buttons: normal case */
+.btn,
+.pulse-button {
+  text-transform: none !important;
+}
+
+/* HERO video */
+#hero {
+  min-height: 100vh;
+}
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+#hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse at 30% 30%,
+      rgba(92, 158, 173, 0.18),
+      transparent 55%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+/* Countdown */
+#countdown .unit .value {
+  font-size: 2rem;
+  font-weight: 600;
+}
+#countdown .unit .label {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* CTA pulse */
+.pulse-button {
+  display: inline-block;
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--brand), var(--brand-alt));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 0 0 rgba(92, 158, 173, 0.55);
+  animation: pulse 1.6s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 158, 173, 0.55);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 26px rgba(92, 158, 173, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 158, 173, 0);
+  }
+}
+
+/* Navbar solid on scroll */
+#mainNav.navbar-solid {
+  background: rgba(14, 14, 18, .25) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: saturate(140%) blur(6px);
+}
+#mainNav .nav-link {
+  transition: color 0.2s ease;
+}
+#mainNav.navbar-solid .nav-link:hover {
+  color: var(--brand) !important;
+}
+
+/* Images */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Timeline */
+.timeline {
+  display: grid;
+  gap: 2rem;
+}
+.timeline-day {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+}
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  position: relative;
+}
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.25);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-block: 0.5rem;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0.9rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 3px solid #111;
+}
+.timeline-item .time {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.timeline-item .content {
+  font-size: 1rem;
+}
+.dj-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand);
+  flex: 0 0 52px;
+}
+
+/* DJ cards */
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Sponsors logos */
+.sponsor-logo {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+  transition: opacity 0.3s, background 0.2s;
+}
+.back-to-top:hover {
+  background: var(--brand-alt);
+}
+.back-to-top i {
+  font-size: 1.2rem;
+}
+
+/* Normalize font weights (no bold site-wide) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.fw-bold,
+strong,
+b,
+.card-title,
+#countdown .unit .value {
+  font-weight: 400 !important;
+}
+
+/* Buttons in brand colors */
+.btn-primary {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-alt);
+  --bs-btn-hover-border-color: var(--brand-alt);
+  --bs-btn-active-bg: var(--brand-alt);
+  --bs-btn-active-border-color: var(--brand-alt);
+}
+
+/* Darker backgrounds using brand shades */
+.bg-darker {
+  background: linear-gradient(
+      180deg,
+      rgba(47, 97, 112, 0.25),
+      rgba(90, 42, 79, 0.2)
+    ),
+    var(--darker);
+}
+#hero .overlay {
+  background: radial-gradient(
+      ellipse at 30% 30%,
+      rgba(47, 97, 112, 0.2),
+      transparent 80%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+/* Pulse button weight softer */
+.pulse-button {
+  font-weight: 500;
+}
+
+/* DJ reveal animation */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.reveal-item.revealed {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#lineup .reveal-item:nth-child(1) {
+  transition-delay: 0s;
+}
+#lineup .reveal-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#lineup .reveal-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+#lineup .reveal-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+#lineup .reveal-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+#lineup .reveal-item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+#lineup .reveal-item:nth-child(7) {
+  transition-delay: 0.6s;
+}
+#lineup .reveal-item:nth-child(8) {
+  transition-delay: 0.7s;
+}
+
+/* Larger date badge */
+.date-badge {
+  font-size: 1.4rem;
+  padding: 0.5rem 0.9rem;
+  letter-spacing: 0.04em;
+
+  font-weight: 300;
+}
+@media (max-width: 576px) {
+  .date-badge {
+    font-size: 1.15rem;
+    font-weight: 300;
+  }
+}
+
+/* Blend background applied to sections */
+.bg-blend {
+  background: linear-gradient(
+      180deg,
+      rgba(47, 97, 112, 0.25),
+      rgba(90, 42, 79, 0.2)
+    ),
+    var(--darker);
+}
+
+/* DJ reveal animation on columns */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-item.revealed {
+  opacity: 1;
+  transform: none;
+}
+#lineup .row > .reveal-item:nth-child(1) {
+  transition-delay: 0s;
+}
+#lineup .row > .reveal-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#lineup .row > .reveal-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+#lineup .row > .reveal-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+#lineup .row > .reveal-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+#lineup .row > .reveal-item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+#lineup .row > .reveal-item:nth-child(7) {
+  transition-delay: 0.6s;
+}
+#lineup .row > .reveal-item:nth-child(8) {
+  transition-delay: 0.7s;
+}
+
+/* See Schedule button hover in brand color */
+.btn-outline-light {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-bg: #5c9ead;
+  --bs-btn-hover-border-color: #5c9ead;
+  --bs-btn-hover-color: #fff;
+}
+
+/* Thin weight for update notice */
+.update-badge {
+  font-weight: 300;
+}
+
+/* DJ name highlight */
+.dj-name{
+  color: #5c9ead;        
+  font-size: 1.2rem;
+  font-weight: 400;        
+  letter-spacing: .2px;
+}
+
+/* timeline */
+.timeline .content .dj-name{
+  color: #a2528c;          
+  font-size: 1.05rem;
+}
+
+
+.timeline-day{
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: .75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.timeline-list{ list-style: none; padding: 0; margin: 0; }
+.timeline-item + .timeline-item{ margin-top: .75rem; }
+.dj-thumb{ width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 44px; }
+.dj-name{ color:#a2528c; font-size:1rem; font-weight:400; letter-spacing:.2px; }
+.time{ color:#b8c6cc; font-size:.95rem; margin-bottom:.25rem; }
+
+/* === Palette-only overrides === */
+
+/* Navbar όταν γίνεται solid στο scroll: gradient στους τόνους σου */
+#mainNav.navbar-solid{
+  background: linear-gradient(90deg, rgba(92,158,173,0.92), rgba(162,82,140,0.92)) !important;
+  /* κρατάμε ήδη το backdrop blur/σκιά από τα υπάρχοντα styles */
+}
+
+/* Σε μικρές οθόνες, όταν ανοίγει το burger, ίδιο color scheme */
+@media (max-width: 991.98px){
+  #mainNav,
+  #mainNav .navbar-collapse{
+    background: linear-gradient(180deg, rgba(92,158,173,0.97), rgba(162,82,140,0.97)) !important;
+  }
+}
+
+/* Links στα brand colors */
+a { color: var(--brand); }
+a:hover { color: var(--brand-alt); }
+
+/* Outline light κουμπί (ήδη υπήρχε αλλά το επιβεβαιώνουμε) */
+.btn-outline-light{
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-hover-color: #fff;
+}
+
+/* Back-to-top: διακριτικό brand gradient */
+.back-to-top{
+  background: linear-gradient(135deg, var(--brand), var(--brand-alt));
+}
+.back-to-top:hover{
+  background: var(--brand-alt);
+}
+
+/* Τονισμός ονομάτων DJ & timeline σε παλέτα */
+.dj-name{ color: var(--brand); }
+.timeline .content .dj-name{ color: var(--brand-alt); }
+
+/* Λεπτές πινελιές στο overlay του hero (παραμένει μόνο χρωματικό) */
+#hero .overlay{
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(92,158,173,0.18), transparent 55%),
+    linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+}
