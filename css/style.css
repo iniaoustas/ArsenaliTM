@@ -413,3 +413,54 @@ b,
 .dj-name{ color:#a2528c; font-size:1rem; font-weight:400; letter-spacing:.2px; }
 .time{ color:#b8c6cc; font-size:.95rem; margin-bottom:.25rem; }
 
+.dj-card {
+  overflow: hidden;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.dj-card img {
+  display: block;
+  transition: transform .4s ease;
+}
+
+.dj-card:hover img {
+  transform: scale(1.05); /* εφέ zoom */
+}
+
+.dj-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .3s ease;
+  padding: 1rem;
+}
+
+.dj-card:hover .dj-overlay {
+  opacity: 1;
+}
+
+
+
+#media-team .card img {
+  transition: transform .4s ease;
+}
+
+#media-team .card:hover img {
+  transform: scale(1.05);
+}
+
+
+.site-social a {
+  color: #fff; /* ή var(--brand) */
+  transition: color .3s;
+}
+.site-social a:hover {
+  color: var(--brand); /* primary χρώμα */
+}

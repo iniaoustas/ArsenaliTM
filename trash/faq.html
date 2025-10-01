@@ -10,20 +10,7 @@
       name="description"
       content="Frequently Asked Questions about Arsenali TM26 — Tango Marathon in Chania."
     />
-    <meta
-      name="keywords"
-      content="Tango, Marathon, Milonga, Chania, Festival, 2026, Arsenali"
-    />
     <meta name="author" content="Arsenali TM26 Team" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Arsenali TM26 — Tango Marathon 2026" />
-    <meta
-      property="og:description"
-      content="Join us in Chania for 4 days of tango at the Megalo Arsenali."
-    />
-    <meta property="og:image" content="img/cover.jpg" />
-    <meta property="og:type" content="website" />
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
@@ -60,7 +47,7 @@
       }
       .accordion-button:not(.collapsed) {
         background-color: #5c9ead !important;
-        color: #fff !important;
+        color: #0b0d10 !important;
         box-shadow: none !important;
       }
       .accordion-button.collapsed {
@@ -477,7 +464,6 @@
           <a href="gdpr.html" class="link-light text-decoration-none me-4"
             >GDPR</a
           >
-          <!-- Social δεξιά -->
           <a href="#" class="text-light me-3" aria-label="Facebook"
             ><i class="bi bi-facebook fs-5"></i
           ></a>
@@ -498,26 +484,7 @@
     ></script>
     <script src="js/main.js" defer></script>
 
-    <!-- Navbar solid on scroll (ίδιο μοτίβο) -->
-    <script>
-      (function () {
-        const nav = document.getElementById("mainNav");
-        if (!nav) return;
-        function onScroll() {
-          if (window.scrollY > 10) {
-            nav.classList.add("navbar-solid");
-            nav.classList.remove("bg-transparent");
-          } else {
-            nav.classList.remove("navbar-solid");
-            nav.classList.add("bg-transparent");
-          }
-        }
-        onScroll();
-        window.addEventListener("scroll", onScroll, { passive: true });
-      })();
-    </script>
-
-    <!-- FAQ toggle (να ανοίγει/κλείνει με ίδιο κλικ) -->
+    <!-- Toggle open/close on same click -->
     <script>
       document.querySelectorAll(".accordion-button").forEach(function (btn) {
         var targetSel =
