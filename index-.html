@@ -913,56 +913,99 @@
     </section>
 
 
-        <!-- TICKETS -->
-    <section id="tickets" class="py-6 bg-darker bg-blend">
-      <div class="container">
-        <h2 class="h1 fw-bold text-center mb-5">Tickets & Passes</h2>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div
-              class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2"
-            >
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-white">Early bird</h5>
-                <div class="display-6 fw-bold  text-white">€120</div>
-                <p class="text-secondary small mt-2">
-                  <!--All milongas & prácticas + brunch-->Until ***date***
-                </p>
-                <a href="#register" class="btn btn-primary mt-auto">Book</a>
-              </div>
+<!-- TICKETS -->
+<section id="tickets" class="py-6 bg-blend">
+  <div class="container">
+    <h2 class="h1 text-center mb-5">Tickets</h2>
+
+    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+      <!-- EARLY BIRD #1 -->
+      <div class="col">
+        <div class="card pricing-card h-100 position-relative early-bird">
+          <span class="ribbon alt">Early Bird</span>
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Individual</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€120</span>
+              <span class="note text-secondary small"> (until Dec 31)</span>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div
-              class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2"
-            >
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title  text-white">Individual</h5>
-                <div class="display-6 fw-bold text-white">€140</div>
-                <p class="text-secondary small mt-2">
-                  All milongas & prácticas + brunch
-                </p>
-                <a href="#register" class="btn btn-primary mt-auto">Book</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div
-              class="card bg-dark border-secondary h-100 shadow-sm rounded-4 border-2"
-            >
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title text-white">Couples</h5>
-                <div class="display-6 fw-bold  text-white">€250</div>
-                <p class="text-secondary small mt-2">
-                  <!--One‑day access + práctica-->All milongas & prácticas + brunch
-                </p>
-                <a href="#register" class="btn btn-primary mt-auto">Book</a>
-              </div>
-            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+              <li class="mb-1">• Fri 22:00–03:00</li>
+              <li class="mb-1">• Sat 22:00–03:00</li>
+              <li class="mb-1">• Sun 18:00–22:00</li>
+            </ul>-->
+            <a href="#register" class="btn btn-primary w-100 mt-3">Choose</a>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- EARLY BIRD #2 -->
+      <div class="col">
+        <div class="card pricing-card h-100 position-relative early-bird">
+          <span class="ribbon alt">Early Bird</span>
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Couple</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongasn</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€230</span>
+              <span class="note text-secondary small"> (until Dec 31)</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+              <li class="mb-1">• Thu 22:00–03:00 (Warm-up)</li>
+              <li class="mb-1">• Fri + Sat (afternoon & night)</li>
+              <li class="mb-1">• Sun Brunch & Farewell</li>
+            </ul>-->
+            <a href="#register" class="btn btn-primary w-100 mt-3">Choose</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STANDARD #3 -->
+      <div class="col">
+        <div class="card pricing-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Individual</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€140</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+              <li class="mb-1">• Pick any single night</li>
+              <li class="mb-1">• Includes snack bar</li>
+            </ul>-->
+            <a href="#register" class="btn btn-outline-light w-100 mt-3">Choose</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STANDARD #4 -->
+      <div class="col">
+        <div class="card pricing-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Couple</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€250</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+              <li class="mb-1">• Pick Fri/Sat/Sun afternoon</li>
+              <li class="mb-1">• Chill vibes & sunny tanda</li>
+            </ul>-->
+            <a href="#register" class="btn btn-outline-light w-100 mt-3">Choose</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center text-secondary small mt-4 mb-0">
+      * Early Bird prices valid until <strong>December 31, 2025</strong>. Regular rates apply afterwards.
+    </p>
+  </div>
+</section>
+
 
     <!-- REGISTER -->
     <section id="register" class="py-6 bg-darker bg-blend">
