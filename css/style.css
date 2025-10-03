@@ -538,3 +538,8 @@ b,
 /* Προσαρμογή heading στο section για να μην “φωνάζει” bold */
 #tickets h2.h1 { font-weight: 500; }
 #tickets h3.h5 { font-weight: 500; }
+
+.dj-time {
+  color: #5c9ead !important; /* Χρώμα ημέρας/ώρας */
+  font-weight: 500;          /* λίγο πιο έντονο */
+}
