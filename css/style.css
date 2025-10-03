@@ -468,7 +468,7 @@ b,
 
 /* Pulse highlight "More about DJs" */
 .btn-highlight {
-  animation: pulse 1.5s infinite;
+  animation: pulse 1.2s infinite;
 }
 
 @keyframes pulse {
@@ -542,4 +542,28 @@ b,
 .dj-time {
   color: #5c9ead !important; /* Χρώμα ημέρας/ώρας */
   font-weight: 500;          /* λίγο πιο έντονο */
+}
+
+
+/* Overlay για φωτογράφο/βιντεογράφο */
+.media-figure { position: relative; }
+.media-figure .dj-overlay {
+  position: absolute;
+  inset: 0; /* top, right, bottom, left: 0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.media-figure:hover .dj-overlay {
+  opacity: 1;
+}
+.media-figure .dj-overlay p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
 }
