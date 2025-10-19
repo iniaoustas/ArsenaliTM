@@ -665,49 +665,7 @@ b,
         color: #fff;
       }
 
-      /* highlight target card when navigated via #hash */
-.card.dj-target-flash{
-  box-shadow: 0 0 0 3px rgba(13,110,253,.65), 0 .6rem 1.2rem rgba(0,0,0,.35);
-  outline: none;
-  border-radius: 1rem;
-  transition: box-shadow .6s ease;
-}
-/* Ensure in-page anchors don't hide under the fixed navbar */
-html { scroll-padding-top: 90px; } /* height of navbar ~72px + breathing room */
 
-/* Strong, visible highlight on target card */
-article.card.dj-target-flash {
-  outline: 3px solid rgba(13,110,253,0.95); /* Bootstrap primary */
-  box-shadow: 0 0 0 6px rgba(13,110,253,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45);
-  border-radius: 1rem;
-  transition: outline-color .5s ease, box-shadow .5s ease;
-  position: relative;
-  z-index: 2; /* lift above neighbors */
-}
-
-/* Optional subtle pulse so user notices */
-@keyframes flashPulse {
-  0%   { outline-color: rgba(13,110,253,0.0); box-shadow: 0 0 0 0 rgba(13,110,253,0); }
-  100% { outline-color: rgba(13,110,253,0.95); box-shadow: 0 0 0 6px rgba(13,110,253,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
-}
-article.card.dj-target-flash { animation: flashPulse .4s ease-out; }
-/* --- Golden highlight with animated pulse --- */
-html { scroll-padding-top: 90px; }
-
-article.card.dj-target-flash {
-  outline: 3px solid rgba(255,215,0,0.95); /* gold tone */
-  box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45);
-  border-radius: 1rem;
-  position: relative;
-  z-index: 2;
-  animation: goldPulse 1.6s ease-in-out;
-}
-
-@keyframes goldPulse {
-  0% { outline-color: rgba(255,215,0,0); box-shadow: 0 0 0 0 rgba(255,215,0,0); }
-  50% { outline-color: rgba(255,215,0,1); box-shadow: 0 0 12px 4px rgba(255,215,0,0.6); }
-  100% { outline-color: rgba(255,215,0,0.95); box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
-}
 
       .accordion-item,
       .accordion-button,
@@ -804,4 +762,48 @@ article.card.dj-target-flash {
 .timeline-item:focus-within .dj-name{
   transform: translateY(-1px);
   text-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+
+/* highlight target card when navigated via #hash */
+.card.dj-target-flash{
+  box-shadow: 0 0 0 3px rgba(13,110,253,.65), 0 .6rem 1.2rem rgba(0,0,0,.35);
+  outline: none;
+  border-radius: 1rem;
+  transition: box-shadow .6s ease;
+}
+/* Ensure in-page anchors don't hide under the fixed navbar */
+html { scroll-padding-top: 90px; } /* height of navbar ~72px + breathing room */
+
+/* Strong, visible highlight on target card */
+article.card.dj-target-flash {
+  outline: 3px solid rgba(13,110,253,0.95); /* Bootstrap primary */
+  box-shadow: 0 0 0 6px rgba(13,110,253,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45);
+  border-radius: 1rem;
+  transition: outline-color .5s ease, box-shadow .5s ease;
+  position: relative;
+  z-index: 2; /* lift above neighbors */
+}
+
+/* Optional subtle pulse so user notices */
+@keyframes flashPulse {
+  0%   { outline-color: rgba(13,110,253,0.0); box-shadow: 0 0 0 0 rgba(13,110,253,0); }
+  100% { outline-color: rgba(13,110,253,0.95); box-shadow: 0 0 0 6px rgba(13,110,253,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
+}
+article.card.dj-target-flash { animation: flashPulse .4s ease-out; }
+/* --- Golden highlight with animated pulse --- */
+html { scroll-padding-top: 90px; }
+
+article.card.dj-target-flash {
+  outline: 3px solid rgba(255,215,0,0.95); /* gold tone */
+  box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 2;
+  animation: goldPulse 1.6s ease-in-out;
+}
+
+@keyframes goldPulse {
+  0% { outline-color: rgba(255,215,0,0); box-shadow: 0 0 0 0 rgba(255,215,0,0); }
+  50% { outline-color: rgba(255,215,0,1); box-shadow: 0 0 12px 4px rgba(255,215,0,0.6); }
+  100% { outline-color: rgba(255,215,0,0.95); box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
 }
