@@ -28,6 +28,25 @@
     />
     <!-- Site CSS -->
     <link href="css/style.css?v=20251019" rel="stylesheet" />
+
+    <style>
+      html {
+        scroll-padding-top: 90px;
+      }
+      [id] {
+        scroll-margin-top: 90px;
+      }
+      #djs .row > [class*="col"] {
+        overflow: visible !important;
+      }
+      article.card {
+        position: relative;
+        overflow: visible;
+      }
+      article.card.dj-target-flash {
+        z-index: 10;
+      }
+    </style>
   </head>
   <body class="bg-dark text-light">
     <!-- NAV -->
@@ -620,6 +639,31 @@
         }
         applyHighlightFromHash();
         window.addEventListener("hashchange", applyHighlightFromHash);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function highlight(el) {
+          if (!el) return;
+          if (!el.classList.contains("card")) {
+            var inner = el.querySelector("article.card");
+            if (inner) el = inner;
+          }
+          el.classList.add("dj-target-flash");
+          setTimeout(function () {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 50);
+          setTimeout(function () {
+            el.classList.remove("dj-target-flash");
+          }, 2000);
+        }
+        function applyFromHash() {
+          if (!location.hash) return;
+          var target = document.querySelector(location.hash);
+          highlight(target);
+        }
+        applyFromHash();
+        window.addEventListener("hashchange", applyFromHash);
       });
     </script>
   </body>

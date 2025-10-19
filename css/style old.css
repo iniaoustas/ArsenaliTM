@@ -808,26 +808,22 @@ article.card.dj-target-flash {
   100% { outline-color: rgba(255,215,0,0.95); box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
 }
 
+/* 1. Anchor offset κάτω από το fixed menu */
+[id] {
+  scroll-margin-top: 90px;
+}
 
-/* ===== FIXES: anchor offset under fixed menu + glow visibility (robust) ===== */
-
-/* Ensure anchors stop under the fixed navbar on ALL pages */
-html { scroll-padding-top: 90px; }
-[id] { scroll-margin-top: 90px; }
-
-/* Don't clip the gold glow around cards on DJs page/grid */
-#djs .row > [class*="col"], 
-#dj-grid > [class*="col"] {
+/* 2. Να μη κόβεται το glow */
+#dj-grid > [class*="col"],
+#djs .row > [class*="col"] {
   overflow: visible !important;
 }
 
-/* Cards render above neighbors when highlighted; don't clip shadows */
-#djs article.card, 
-#dj-grid article.card {
+/* 3. Η κάρτα να κάθεται πάνω από τις άλλες όταν φωτίζεται */
+article.card {
   position: relative;
   overflow: visible;
 }
-#djs article.card.dj-target-flash, 
-#dj-grid article.card.dj-target-flash {
+article.card.dj-target-flash {
   z-index: 10;
 }
