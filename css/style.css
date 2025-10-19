@@ -809,36 +809,11 @@ article.card.dj-target-flash {
 }
 
 
-/* ===== FIXES: anchor offset under fixed menu + glow visibility (robust) ===== */
-
-/* Ensure anchors stop under the fixed navbar on ALL pages */
-html { scroll-padding-top: 50px; }
-[id] { scroll-margin-top: 50px; }
-
-/* Don't clip the gold glow around cards on DJs page/grid */
-#djs .row > [class*="col"], 
-#dj-grid > [class*="col"] {
-  overflow: visible !important;
-}
-
-/* Cards render above neighbors when highlighted; don't clip shadows */
-#djs article.card, 
-#dj-grid article.card {
-  position: relative;
-  overflow: visible;
-}
-#djs article.card.dj-target-flash, 
-#dj-grid article.card.dj-target-flash {
-  z-index: 10;
-}
-
-/* --- Anchor offset for fixed navbar --- */
+/* ===== Global anchor offset for fixed navbar ===== */
 html {
-  scroll-padding-top: 90px; /* περίπου όσο το ύψος του navbar */
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* adjust to navbar height */
 }
-
-/* Κάθε section με id να υπολογίζει offset κάτω από το μενού */
 [id] {
   scroll-margin-top: 90px;
 }
-
