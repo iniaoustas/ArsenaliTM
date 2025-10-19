@@ -1,0 +1,21 @@
+/* ===== Adaptive anchor offset for fixed navbar (auto height) ===== */
+:root { --nav-h: 72px; } /* fallback; JS updates this */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
+/* Only elements we actually jump to should offset */
+section[id],
+article.card[id] {
+  scroll-margin-top: var(--nav-h);
+}
+
+/* Ensure DJ glow isn't clipped */
+#djs .row > [class*="col"],
+#dj-grid > [class*="col"] {
+  overflow: visible !important;
+}
+article.card { position: relative; overflow: visible; }
+article.card.dj-target-flash { z-index: 10; }
