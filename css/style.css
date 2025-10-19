@@ -831,3 +831,14 @@ html { scroll-padding-top: 50px; }
 #dj-grid article.card.dj-target-flash {
   z-index: 10;
 }
+
+/* --- Anchor offset for fixed navbar --- */
+html {
+  scroll-padding-top: 90px; /* περίπου όσο το ύψος του navbar */
+}
+
+/* Κάθε section με id να υπολογίζει offset κάτω από το μενού */
+[id] {
+  scroll-margin-top: 90px;
+}
+
