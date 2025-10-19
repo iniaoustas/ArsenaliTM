@@ -772,7 +772,7 @@ b,
   transition: box-shadow .6s ease;
 }
 /* Ensure in-page anchors don't hide under the fixed navbar */
-html { scroll-padding-top: 90px; } /* height of navbar ~72px + breathing room */
+ /* height of navbar ~72px + breathing room */
 
 /* Strong, visible highlight on target card */
 article.card.dj-target-flash {
@@ -791,7 +791,7 @@ article.card.dj-target-flash {
 }
 article.card.dj-target-flash { animation: flashPulse .4s ease-out; }
 /* --- Golden highlight with animated pulse --- */
-html { scroll-padding-top: 90px; }
+
 
 article.card.dj-target-flash {
   outline: 3px solid rgba(255,215,0,0.95); /* gold tone */
@@ -810,10 +810,13 @@ article.card.dj-target-flash {
 
 
 /* ===== Global anchor offset for fixed navbar ===== */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px; /* adjust to navbar height */
-}
-[id] {
-  scroll-margin-top: 90px;
-}
+
+/* --- Anchor offset κάτω από το fixed menu (single source of truth) --- */
+html { scroll-padding-top: 72px; } /* adjust to your exact navbar height */
+
+/* --- Glow στις κάρτες DJ να μην κόβεται --- */
+#dj-grid > [class*="col"],
+#djs .row > [class*="col"] { overflow: visible !important; }
+
+article.card { position: relative; overflow: visible; }
+article.card.dj-target-flash { z-index: 10; }
