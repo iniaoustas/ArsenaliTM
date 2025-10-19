@@ -812,8 +812,8 @@ article.card.dj-target-flash {
 /* ===== FIXES: anchor offset under fixed menu + glow visibility (robust) ===== */
 
 /* Ensure anchors stop under the fixed navbar on ALL pages */
-html { scroll-padding-top: 90px; }
-[id] { scroll-margin-top: 90px; }
+html { scroll-padding-top: 50px; }
+[id] { scroll-margin-top: 50px; }
 
 /* Don't clip the gold glow around cards on DJs page/grid */
 #djs .row > [class*="col"], 
