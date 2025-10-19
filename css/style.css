@@ -807,3 +807,23 @@ article.card.dj-target-flash {
   50% { outline-color: rgba(255,215,0,1); box-shadow: 0 0 12px 4px rgba(255,215,0,0.6); }
   100% { outline-color: rgba(255,215,0,0.95); box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
 }
+
+/* 1. Anchor offset κάτω από το fixed menu */
+[id] {
+  scroll-margin-top: 90px;
+}
+
+/* 2. Να μη κόβεται το glow */
+#dj-grid > [class*="col"],
+#djs .row > [class*="col"] {
+  overflow: visible !important;
+}
+
+/* 3. Η κάρτα να κάθεται πάνω από τις άλλες όταν φωτίζεται */
+article.card {
+  position: relative;
+  overflow: visible;
+}
+article.card.dj-target-flash {
+  z-index: 10;
+}
