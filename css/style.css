@@ -568,73 +568,6 @@ b,
   line-height: 1.4;
 }
 
-.timeline-list .content a.dj-link{
-  display:flex; align-items:center; gap:.75rem;
-  text-decoration:none; color:inherit;
-  outline:0;
-  cursor:pointer;
-}
-
-/* Circle thumbs + smooth transforms (works for linked & non-linked) */
-.timeline-list .content a.dj-link img,
-.timeline-list .content img.dj-thumb{
-  width:56px; height:56px;
-  aspect-ratio:1/1;
-  border-radius:50%;
-  object-fit:cover;
-  transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
-  will-change: transform;
-}
-
-/* Keep the time above scaled image for readability */
-.timeline-item { position: relative; }
-.timeline-item .time{
-  position: relative;
-  z-index: 5;
-  transition: transform .25s ease, color .25s ease, text-shadow .25s ease, opacity .25s ease;
-  text-shadow: 0 2px 6px rgba(0,0,0,.35);
-}
-
-/* Positioning context for content/images */
-.timeline-list .content{ position: relative; z-index: 1; }
-.timeline-list .content a.dj-link img{ position: relative; z-index: 1; }
-
-/* Unified hover: lift the whole item + scale image 1.5 */
-.timeline-item{
-  transition: transform .25s ease, box-shadow .25s ease;
-  border-radius: .75rem;
-}
-.timeline-item:hover,
-.timeline-item:focus-within{
-  transform: translateY(-2px);
-  box-shadow: 0 .75rem 1.25rem rgba(0,0,0,.35);
-}
-.timeline-item:hover img.dj-thumb,
-.timeline-item:focus-within img.dj-thumb{
-  transform: scale(1.5);
-  box-shadow: 0 .9rem 1.4rem rgba(0,0,0,.45);
-  filter: saturate(1.08);
-}
-
-/* Also scale thumbs that are inside a link */
-.timeline-item:hover a.dj-link img,
-.timeline-item:focus-within a.dj-link img{
-  transform: scale(1.5);
-  box-shadow: 0 .9rem 1.4rem rgba(0,0,0,.45);
-  filter: saturate(1.08);
-}
-
-/* Optional micro-motion on DJ name for subtle emphasis */
-.timeline-list .content .dj-name{
-  display:inline-block;
-  transition:transform .22s ease, color .22s ease, text-shadow .22s ease;
-}
-.timeline-item:hover .dj-name,
-.timeline-item:focus-within .dj-name{
-  transform: translateY(-1px);
-  text-shadow: 0 2px 6px rgba(0,0,0,.25);
-}
-
 /* ---- Hero video fallback image (replaces previous inline style) ---- */
 .bg-video-fallback {
   position: absolute;
@@ -804,3 +737,71 @@ article.card.dj-target-flash {
         box-shadow: none !important;
         border-color: rgba(255, 255, 255, 0.2) !important;
       }
+
+      
+.timeline-list .content a.dj-link{
+  display:flex; align-items:center; gap:.75rem;
+  text-decoration:none; color:inherit;
+  outline:0;
+  cursor:pointer;
+}
+
+/* Circle thumbs + smooth transforms (works for linked & non-linked) */
+.timeline-list .content a.dj-link img,
+.timeline-list .content img.dj-thumb{
+  width:56px; height:56px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  object-fit:cover;
+  transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  will-change: transform;
+}
+
+/* Keep the time above scaled image for readability */
+.timeline-item { position: relative; }
+.timeline-item .time{
+  position: relative;
+  z-index: 5;
+  transition: transform .25s ease, color .25s ease, text-shadow .25s ease, opacity .25s ease;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+
+/* Positioning context for content/images */
+.timeline-list .content{ position: relative; z-index: 1; }
+.timeline-list .content a.dj-link img{ position: relative; z-index: 1; }
+
+/* Unified hover: lift the whole item + scale image 1.5 */
+.timeline-item{
+  transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: .75rem;
+}
+.timeline-item:hover,
+.timeline-item:focus-within{
+  transform: translateY(-2px);
+  box-shadow: 0 .75rem 1.25rem rgba(0,0,0,.35);
+}
+.timeline-item:hover img.dj-thumb,
+.timeline-item:focus-within img.dj-thumb{
+  transform: scale(1.5);
+  box-shadow: 0 .9rem 1.4rem rgba(0,0,0,.45);
+  filter: saturate(1.08);
+}
+
+/* Also scale thumbs that are inside a link */
+.timeline-item:hover a.dj-link img,
+.timeline-item:focus-within a.dj-link img{
+  transform: scale(1.5);
+  box-shadow: 0 .9rem 1.4rem rgba(0,0,0,.45);
+  filter: saturate(1.08);
+}
+
+/* Optional micro-motion on DJ name for subtle emphasis */
+.timeline-list .content .dj-name{
+  display:inline-block;
+  transition:transform .22s ease, color .22s ease, text-shadow .22s ease;
+}
+.timeline-item:hover .dj-name,
+.timeline-item:focus-within .dj-name{
+  transform: translateY(-1px);
+  text-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
