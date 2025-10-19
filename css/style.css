@@ -567,3 +567,240 @@ b,
   font-size: 1rem;
   line-height: 1.4;
 }
+
+.timeline-list .content a.dj-link{
+  display:flex; align-items:center; gap:.75rem;
+  text-decoration:none; color:inherit;
+  outline:0;
+  cursor:pointer;
+}
+
+/* Circle thumbs + smooth transforms (works for linked & non-linked) */
+.timeline-list .content a.dj-link img,
+.timeline-list .content img.dj-thumb{
+  width:56px; height:56px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  object-fit:cover;
+  transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  will-change: transform;
+}
+
+/* Keep the time above scaled image for readability */
+.timeline-item { position: relative; }
+.timeline-item .time{
+  position: relative;
+  z-index: 5;
+  transition: transform .25s ease, color .25s ease, text-shadow .25s ease, opacity .25s ease;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+
+/* Positioning context for content/images */
+.timeline-list .content{ position: relative; z-index: 1; }
+.timeline-list .content a.dj-link img{ position: relative; z-index: 1; }
+
+/* Unified hover: lift the whole item + scale image 1.5 */
+.timeline-item{
+  transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: .75rem;
+}
+.timeline-item:hover,
+.timeline-item:focus-within{
+  transform: translateY(-2px);
+  box-shadow: 0 .75rem 1.25rem rgba(0,0,0,.35);
+}
+.timeline-item:hover img.dj-thumb,
+.timeline-item:focus-within img.dj-thumb{
+  transform: scale(1.5);
+  box-shadow: 0 .9rem 1.4rem rgba(0,0,0,.45);
+  filter: saturate(1.08);
+}
+
+/* Also scale thumbs that are inside a link */
+.timeline-item:hover a.dj-link img,
+.timeline-item:focus-within a.dj-link img{
+  transform: scale(1.5);
+  box-shadow: 0 .9rem 1.4rem rgba(0,0,0,.45);
+  filter: saturate(1.08);
+}
+
+/* Optional micro-motion on DJ name for subtle emphasis */
+.timeline-list .content .dj-name{
+  display:inline-block;
+  transition:transform .22s ease, color .22s ease, text-shadow .22s ease;
+}
+.timeline-item:hover .dj-name,
+.timeline-item:focus-within .dj-name{
+  transform: translateY(-1px);
+  text-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+
+/* ---- Hero video fallback image (replaces previous inline style) ---- */
+.bg-video-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ---- Navbar solid helper (replaces previous inline style) ---- */
+.navbar-solid{
+  background-color: rgba(0,0,0,.75) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* ---- Back-to-top button (if used) ---- */
+.back-to-top{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 42px; height: 42px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  transition: transform .2s ease, opacity .2s ease;
+  opacity: .9;
+}
+.back-to-top:hover{ transform: translateY(-2px); opacity: 1; }
+
+      /* Page-local tweaks (keeps site’s palette) */
+      :root {
+        --brand: #5c9ead;
+        --brand-alt: #a2528c;
+        --brand-dark: #2f6170;
+        --brand-alt-dark: #5a2a4f;
+      }
+      body {
+        font-weight: 400;
+      }
+      .page-intro {
+        background: linear-gradient(
+            180deg,
+            rgba(47, 97, 112, 0.25),
+            rgba(90, 42, 79, 0.2)
+          ),
+          var(--darker, #0b0d10);
+      }
+      .pill-badge {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 999px;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.9rem;
+        margin-right: 0.4rem;
+        white-space: nowrap;
+      }
+      .card.acco {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .card.acco:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.28);
+      }
+      .card.acco .thumb {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        width: 100%;
+        background: #111;
+      }
+      .acco .badge-tier {
+        background: linear-gradient(90deg, var(--brand), var(--brand-alt));
+        border: 0;
+      }
+      .section-title small {
+        color: #aaa;
+        font-weight: 300;
+      }
+      .map-embed {
+        border: 0;
+        width: 100%;
+        height: 380px;
+        border-radius: 1rem;
+      }
+      .filters .btn {
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0.4rem 0.9rem;
+      }
+      .filters .btn.active {
+        background: linear-gradient(90deg, var(--brand), var(--brand-alt));
+        border-color: transparent;
+        color: #fff;
+      }
+
+      /* highlight target card when navigated via #hash */
+.card.dj-target-flash{
+  box-shadow: 0 0 0 3px rgba(13,110,253,.65), 0 .6rem 1.2rem rgba(0,0,0,.35);
+  outline: none;
+  border-radius: 1rem;
+  transition: box-shadow .6s ease;
+}
+/* Ensure in-page anchors don't hide under the fixed navbar */
+html { scroll-padding-top: 90px; } /* height of navbar ~72px + breathing room */
+
+/* Strong, visible highlight on target card */
+article.card.dj-target-flash {
+  outline: 3px solid rgba(13,110,253,0.95); /* Bootstrap primary */
+  box-shadow: 0 0 0 6px rgba(13,110,253,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45);
+  border-radius: 1rem;
+  transition: outline-color .5s ease, box-shadow .5s ease;
+  position: relative;
+  z-index: 2; /* lift above neighbors */
+}
+
+/* Optional subtle pulse so user notices */
+@keyframes flashPulse {
+  0%   { outline-color: rgba(13,110,253,0.0); box-shadow: 0 0 0 0 rgba(13,110,253,0); }
+  100% { outline-color: rgba(13,110,253,0.95); box-shadow: 0 0 0 6px rgba(13,110,253,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
+}
+article.card.dj-target-flash { animation: flashPulse .4s ease-out; }
+/* --- Golden highlight with animated pulse --- */
+html { scroll-padding-top: 90px; }
+
+article.card.dj-target-flash {
+  outline: 3px solid rgba(255,215,0,0.95); /* gold tone */
+  box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 2;
+  animation: goldPulse 1.6s ease-in-out;
+}
+
+@keyframes goldPulse {
+  0% { outline-color: rgba(255,215,0,0); box-shadow: 0 0 0 0 rgba(255,215,0,0); }
+  50% { outline-color: rgba(255,215,0,1); box-shadow: 0 0 12px 4px rgba(255,215,0,0.6); }
+  100% { outline-color: rgba(255,215,0,0.95); box-shadow: 0 0 0 6px rgba(255,215,0,0.25), 0 .8rem 1.4rem rgba(0,0,0,.45); }
+}
+
+      .accordion-item,
+      .accordion-button,
+      .accordion-body {
+        background-color: #0b0d10 !important;
+        color: #fff !important;
+      }
+      .accordion-item {
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 0.5rem !important;
+        overflow: hidden;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #5c9ead !important;
+        color: #fff !important;
+        box-shadow: none !important;
+      }
+      .accordion-button.collapsed {
+        background-color: #0b0d10 !important;
+        color: #fff !important;
+      }
+      .accordion-body {
+        background-color: #1a1a1a !important;
+        color: #fff !important;
+      }
+      .accordion-button:focus {
+        box-shadow: none !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+      }

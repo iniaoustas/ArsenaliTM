@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Arsenali TM26</title>
+
     <!-- Meta / SEO -->
     <meta
-      content="Arsenali TM26 — 4 Days Tango Marathon in Chania. Milongas, DJs, brunch milonga."
       name="description"
+      content="Arsenali TM26 — 4 Days Tango Marathon in Chania. Milongas, DJs, brunch milonga."
     />
     <meta
-      content="Tango, Marathon, Milonga, Chania, Festival, 2026, Arsenali"
       name="keywords"
+      content="Tango, Marathon, Milonga, Chania, Festival, 2026, Arsenali"
     />
-    <meta content="Arsenali TM26 Team" name="author" />
+    <meta name="author" content="Arsenali TM26 Team" />
+
     <!-- Open Graph -->
-    <meta content="Arsenali Tango Marathon 2026" property="og:title" />
+    <meta property="og:title" content="Arsenali Tango Marathon 2026" />
     <meta
-      content="Join us in Chania for 4 days of tango at the Megalo Arsenali."
       property="og:description"
+      content="Join us in Chania for 4 days of tango at the Megalo Arsenali."
     />
-    <meta content="img/cover.jpg" property="og:image" />
-    <meta content="website" property="og:type" />
+    <meta property="og:image" content="img/cover.jpg" />
+    <meta property="og:type" content="website" />
+
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
       rel="stylesheet"
     />
+
     <!-- Bootstrap & Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -39,34 +43,47 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+
     <!-- Styles -->
     <link href="css/style.css" rel="stylesheet" />
-  </head>
 
+    <style></style>
+
+    <style>
+      .bg-video-fallback {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+    </style>
+  </head>
   <body class="bg-dark text-light">
     <!-- NAV -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2"
       id="mainNav"
+      class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2"
     >
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
           <img
-            alt="Arsenali TM26"
-            class="d-inline-block align-text-top"
-            height="55"
             src="img/logo.svg"
+            alt="Arsenali TM26"
+            height="55"
+            class="d-inline-block align-text-top"
           />
           <span class="d-none d-sm-inline">Arsenali TM26</span>
         </a>
         <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
           aria-controls="nav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#nav"
-          data-bs-toggle="collapse"
-          type="button"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -91,58 +108,45 @@
               <a class="nav-link" href="#tickets">Tickets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="accommodation-coming-soon.html"
-                >Accommodation</a
-              >
+              <a class="nav-link" href="accommodation-coming-soon.html">Accommodation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <a
-                class="btn btn-primary btn-sm ms-lg-2"
-                href="https://forms.gle/XjkhJXqHq8LvEnns8"
-                target="_blank"
+              <a class="btn btn-primary btn-sm ms-lg-2" href="https://forms.gle/XjkhJXqHq8LvEnns8" target="_blank"
                 >Register</a
               >
             </li>
             <li class="nav-item d-flex align-items-center ms-lg-3 site-social">
-              <a
-                aria-label="Facebook"
-                class="nav-link p-0"
-                href="https://www.facebook.com/people/Arsenali-Tango-Marathon/61553993340931/"
-                ><i class="bi bi-facebook fs-5"></i
-              ></a>
+              <a href="https://www.facebook.com/people/Arsenali-Tango-Marathon/61553993340931/" class="nav-link p-0" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
               <!--<a href="#" class="nav-link p-0 ms-3" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>-->
-              <a
-                aria-label="YouTube"
-                class="nav-link p-0 ms-3"
-                href="https://www.youtube.com/@TangueriaChania"
-                ><i class="bi bi-youtube fs-5"></i
-              ></a>
+              <a href="https://www.youtube.com/@TangueriaChania" class="nav-link p-0 ms-3" aria-label="YouTube"><i class="bi bi-youtube fs-5"></i></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
     <!-- HERO -->
-    <header class="position-relative overflow-hidden" id="hero">
+    <header id="hero" class="position-relative overflow-hidden">
       <video
-        autoplay=""
+        muted
         class="bg-video"
-        loop=""
-        muted=""
-        playsinline=""
-        poster="img/LogoWhite.svg"
+        autoplay
+        loop
+        playsinline
         preload="metadata"
+        poster="img/LogoWhite.svg"
       >
         <source src="video/background.webm" type="video/webm" />
         <source src="video/background.mp4" type="video/mp4" />
       </video>
       <noscript
-        ><img alt="Background" class="bg-video-fallback" src="img/cover.jpg"
+        ><img src="img/cover.jpg" alt="Background" class="bg-video-fallback"
       /></noscript>
       <div class="overlay"></div>
+
       <div class="container py-5 position-relative" style="z-index: 2">
         <div class="row min-vh-100 align-items-center text-center">
           <div class="col-lg-10 mx-auto">
@@ -156,19 +160,16 @@
               Non‑stop milongas, warm-up milonga, happenings.
             </p>
             <div class="d-flex justify-content-center gap-2 mt-4">
-              <a
-                class="btn btn-primary btn-lg"
-                href="https://forms.gle/XjkhJXqHq8LvEnns8"
-                target="_blank"
+              <a href="https://forms.gle/XjkhJXqHq8LvEnns8" target="_blank" class="btn btn-primary btn-lg"
                 ><i class="bi bi-ticket-perforated me-2"></i>Register</a
               >
-              <a class="btn btn-outline-light btn-lg" href="#schedule"
+              <a href="#schedule" class="btn btn-outline-light btn-lg"
                 ><i class="bi bi-calendar3 me-2"></i>See schedule</a
               >
             </div>
             <div
-              class="d-flex justify-content-center gap-4 mt-5"
               id="countdown"
+              class="d-flex justify-content-center gap-4 mt-5"
             >
               <div class="unit text-center">
                 <div class="value" data-key="days">00</div>
@@ -194,359 +195,360 @@
         </div>
       </div>
     </header>
+
     <!-- ABOUT -->
-    <section class="py-6 bg-blend" id="about">
+    <section id="about" class="py-6 bg-blend">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
             <h2 class="h1 fw-bold">What is the Marathon</h2>
             <p class="text-secondary">
-              A Tango Marathon is a multi-day social dance gathering where tango
-              enthusiasts from different countries meet to share their passion.
-              Unlike festivals, marathons focus on continuous dancing — usually
-              three or four days of back-to-back milongas with international
-              DJs, in a friendly, non-competitive atmosphere. The goal is to
-              enjoy music, connection, and community, often in a single venue
-              that becomes the dancers’ home for the entire event.
+              A Tango Marathon is a multi-day social dance gathering where tango enthusiasts from different countries meet to share their passion. 
+              Unlike festivals, marathons focus on continuous dancing — usually three or four days of back-to-back milongas with international DJs, in a friendly, non-competitive atmosphere. 
+              The goal is to enjoy music, connection, and community, often in a single venue that becomes the dancers’ home for the entire event.
             </p>
             <ul class="list-unstyled small text-secondary">
               <li>• 45+ hours dancing • Wooden floor • Brunch milonga</li>
               <li>• 1:1 role balance • Photographer • Cozy lounge areas</li>
             </ul>
           </div>
-          <div class="col-lg-6">
-            <div
-              class="ratio ratio-16x9 rounded-4 overflow-hidden shadow d-flex align-items-center justify-content-center"
-            >
-              <img
-                alt="About the event"
-                class="img-fluid object-fit-contain"
-                src="img/logo.svg"
-              />
-            </div>
+<div class="col-lg-6">
+  <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow d-flex align-items-center justify-content-center">
+    <img
+      src="img/logo.svg"
+      class="img-fluid object-fit-contain"
+      alt="About the event"
+    />
+  </div>
+</div>
+
           </div>
         </div>
       </div>
     </section>
-    <section class="py-6 bg-blend" id="gallery">
+    <section id="gallery" class="py-6 bg-blend">
       <div class="container">
         <h2 class="h1 text-center mb-5">Gallery</h2>
+
         <div
+          id="galleryCarousel"
           class="carousel slide"
           data-bs-ride="carousel"
-          id="galleryCarousel"
         >
           <!-- Indicators -->
           <div class="carousel-indicators">
             <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="0"
+              class="active"
               aria-current="true"
               aria-label="Slide 1"
-              class="active"
-              data-bs-slide-to="0"
-              data-bs-target="#galleryCarousel"
-              type="button"
             ></button>
             <button
-              aria-label="Slide 2"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="1"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 2"
             ></button>
             <button
-              aria-label="Slide 3"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="2"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 3"
             ></button>
             <button
-              aria-label="Slide 4"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="3"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 4"
             ></button>
             <button
-              aria-label="Slide 5"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="4"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 5"
             ></button>
             <button
-              aria-label="Slide 6"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="5"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 6"
             ></button>
             <button
-              aria-label="Slide 7"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="6"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 7"
             ></button>
             <button
-              aria-label="Slide 8"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="7"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 8"
             ></button>
             <button
-              aria-label="Slide 9"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="8"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 9"
             ></button>
             <button
-              aria-label="Slide 10"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="9"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 10"
             ></button>
             <button
-              aria-label="Slide 11"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="10"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 11"
             ></button>
             <button
-              aria-label="Slide 12"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="11"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 12"
             ></button>
             <button
-              aria-label="Slide 13"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="12"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 13"
             ></button>
             <button
-              aria-label="Slide 14"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="13"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 14"
             ></button>
             <button
-              aria-label="Slide 15"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="14"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 15"
             ></button>
             <button
-              aria-label="Slide 16"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="15"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 16"
             ></button>
             <button
-              aria-label="Slide 17"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="16"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 17"
             ></button>
             <button
-              aria-label="Slide 18"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="17"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 18"
             ></button>
             <button
-              aria-label="Slide 19"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="18"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 19"
             ></button>
             <button
-              aria-label="Slide 20"
+              type="button"
+              data-bs-target="#galleryCarousel"
               data-bs-slide-to="19"
-              data-bs-target="#galleryCarousel"
-              type="button"
+              aria-label="Slide 20"
             ></button>
             <button
-              aria-label="Slide 21"
-              data-bs-slide-to="20"
-              data-bs-target="#galleryCarousel"
               type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="20"
+              aria-label="Slide 21"
             ></button>
           </div>
+
           <!-- Slides -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                alt="Gallery 1"
-                class="d-block w-100"
                 src="img/gallery/1 arsenali.jpg"
+                class="d-block w-100"
+                alt="Gallery 1"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 2"
-                class="d-block w-100"
                 src="img/gallery/2 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 2"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 3"
-                class="d-block w-100"
                 src="img/gallery/3 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 3"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 4"
-                class="d-block w-100"
                 src="img/gallery/4 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 4"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 5"
-                class="d-block w-100"
                 src="img/gallery/5 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 5"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 6"
-                class="d-block w-100"
                 src="img/gallery/6 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 6"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 7"
-                class="d-block w-100"
                 src="img/gallery/7 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 7"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 8"
-                class="d-block w-100"
                 src="img/gallery/8 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 8"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 9"
-                class="d-block w-100"
                 src="img/gallery/9 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 9"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 10"
-                class="d-block w-100"
                 src="img/gallery/10 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 10"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 11"
-                class="d-block w-100"
                 src="img/gallery/11 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 11"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 12"
-                class="d-block w-100"
                 src="img/gallery/12 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 12"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 13"
-                class="d-block w-100"
                 src="img/gallery/13 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 13"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 14"
-                class="d-block w-100"
                 src="img/gallery/14 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 14"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 15"
-                class="d-block w-100"
                 src="img/gallery/15 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 15"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 16"
-                class="d-block w-100"
                 src="img/gallery/16 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 16"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 17"
-                class="d-block w-100"
                 src="img/gallery/17 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 17"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 18"
-                class="d-block w-100"
                 src="img/gallery/18 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 18"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 19"
-                class="d-block w-100"
                 src="img/gallery/19 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 19"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 20"
-                class="d-block w-100"
                 src="img/gallery/20 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 20"
               />
             </div>
             <div class="carousel-item">
               <img
-                alt="Gallery 21"
-                class="d-block w-100"
                 src="img/gallery/21 people.jpg"
+                class="d-block w-100"
+                alt="Gallery 21"
               />
             </div>
           </div>
+
           <!-- Controls -->
           <button
             class="carousel-control-prev"
-            data-bs-slide="prev"
-            data-bs-target="#galleryCarousel"
             type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="prev"
           >
-            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button
             class="carousel-control-next"
-            data-bs-slide="next"
-            data-bs-target="#galleryCarousel"
             type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="next"
           >
-            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div>
     </section>
+
     <!-- DJS -->
-    <section class="py-6 bg-darker bg-blend" id="djs">
+    <section id="djs" class="py-6 bg-darker bg-blend">
       <div class="container">
         <div
           class="d-flex align-items-end justify-content-between mb-4 flex-wrap gap-3"
         >
           <h2 class="h1 fw-bold m-0">DJ’s</h2>
-          <a class="link-light text-decoration-none" href="djs.html"
+          <a href="djs.html" class="link-light text-decoration-none"
             >More about DJ’s <i class="bi bi-arrow-right"></i
           ></a>
         </div>
@@ -555,20 +557,17 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="Tonia"
-                  class="card-img-top object-fit-cover"
-                  src="img/Tonia.jpg"
-                  style="height: 300px"
-                />
-                <div class="dj-overlay">
-                  <p>
-                    her choices in music are characterized by diversity of
-                    rhythms and melodies
-                  </p>
-                </div>
-              </div>
+            <div class="dj-card position-relative">
+              <img
+                src="img/Tonia.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="Tonia"
+              />
+              <div class="dj-overlay">
+    <p>her choices in music are characterized by diversity of rhythms and melodies</p>
+  </div>
+</div>
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">Tonia Papadaki</h5>
                 <p class="card-text text-secondary small">Chania, Greece</p>
@@ -579,20 +578,18 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="Jan Tango"
-                  class="card-img-top object-fit-cover"
-                  src="img/JanTango.jpg"
-                  style="height: 300px"
-                />
+            <div class="dj-card position-relative">
+              <img
+                src="img/JanTango.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="Jan Tango"
+              />
                 <div class="dj-overlay">
-                  <p>
-                    carefully crafts tandas that honor the energy of the
-                    orchestras and the flow of the milonga
-                  </p>
-                </div>
-              </div>
+    <p>carefully crafts tandas that honor the energy of the orchestras and the flow of the milonga</p>
+  </div>
+</div>
+
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">Jan Tango</h5>
                 <p class="card-text text-secondary small">Paris, France</p>
@@ -603,17 +600,17 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="Babis Pappas"
-                  class="card-img-top object-fit-cover"
-                  src="img/BabisPappas.jpg"
-                  style="height: 300px"
-                />
-                <div class="dj-overlay">
-                  <p>makes sure to create the ideal musical atmosphere</p>
-                </div>
-              </div>
+            <div class="dj-card position-relative">
+              <img
+                src="img/BabisPappas.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="Babis Pappas"
+              />
+                              <div class="dj-overlay">
+    <p>makes sure to create the ideal musical atmosphere</p>
+  </div>
+</div>
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">Babis Pappas</h5>
                 <p class="card-text text-secondary small">Larissa, Greece</p>
@@ -624,20 +621,17 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="Mert Emre Üstün"
-                  class="card-img-top object-fit-cover"
-                  src="img/MertEmreÜstün.jpg"
-                  style="height: 300px"
-                />
-                <div class="dj-overlay">
-                  <p>
-                    always respecting the traditional tanda structure to elevate
-                    the spirit of each milonga
-                  </p>
-                </div>
-              </div>
+            <div class="dj-card position-relative"> 
+              <img
+                src="img/MertEmreÜstün.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="Mert Emre Üstün"
+              />
+                                            <div class="dj-overlay">
+    <p>always respecting the traditional tanda structure to elevate the spirit of each milonga</p>
+  </div>
+</div>
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">Mert Emre Üstün</h5>
                 <p class="card-text text-secondary small">Xanthi, Greece</p>
@@ -648,21 +642,18 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="Michal Shevchenko"
-                  class="card-img-top object-fit-cover"
-                  src="img/MichalShevchenko.jpg"
-                  style="height: 300px"
-                />
+            <div class="dj-card position-relative"> 
+              <img
+                src="img/MichalShevchenko.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="Michal Shevchenko"
+              />
                 <div class="dj-overlay">
-                  <p>
-                    loves the shifting dynamics of Aníbal Troilo, the lyricism
-                    of Carlos Di Sarli, the energy of Juan D’Arienzo, and the
-                    baroque style of Osvaldo Pugliese.
-                  </p>
-                </div>
-              </div>
+    <p>loves the shifting dynamics of Aníbal Troilo, the lyricism of Carlos Di Sarli, the energy of Juan D’Arienzo, and the baroque style of Osvaldo Pugliese.</p>
+  </div>
+</div>
+
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">Michal Shevchenko</h5>
                 <p class="card-text text-secondary small">Poland</p>
@@ -673,20 +664,18 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="Santiago Buonomo"
-                  class="card-img-top object-fit-cover"
-                  src="img/SantiagoBuonomo.jpg"
-                  style="height: 300px"
-                />
+            <div class="dj-card position-relative"> 
+              <img
+                src="img/SantiagoBuonomo.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="Santiago Buonomo"
+              />
                 <div class="dj-overlay">
-                  <p>
-                    tandas that keep the floor alive with the energy of the
-                    Golden Age
-                  </p>
-                </div>
-              </div>
+    <p>tandas that keep the floor alive with the energy of the Golden Age</p>
+  </div>
+</div>
+
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">Santiago Buonomo</h5>
                 <p class="card-text text-secondary small">Uruguay</p>
@@ -697,35 +686,28 @@
             <div
               class="card bg-dark border-secondary h-100 shadow-sm rounded-4"
             >
-              <div class="dj-card position-relative">
-                <img
-                  alt="John Niaou"
-                  class="card-img-top object-fit-cover"
-                  src="img/JohnNiaou.jpg"
-                  style="height: 300px"
-                />
+            <div class="dj-card position-relative"> 
+              <img
+                src="img/JohnNiaou.jpg"
+                class="card-img-top object-fit-cover"
+                style="height: 300px"
+                alt="John Niaou"
+              />
                 <div class="dj-overlay">
-                  <p>
-                    rhythm and melody dominate his tandas and the dance floor is
-                    on fire.
-                  </p>
-                </div>
-              </div>
+    <p>rhythm and melody dominate his tandas and the dance floor is on fire.</p>
+  </div>
+</div>
+
               <div class="card-body">
                 <h5 class="card-title mb-1 dj-name">John Niaou</h5>
                 <p class="card-text text-secondary small">Chania, Greece</p>
               </div>
             </div>
           </div>
-          <div
-            class="col-md-3 d-flex align-items-center justify-content-center reveal-item"
-          >
-            <a
-              class="btn btn-primary btn-lg btn-highlight w-100"
-              href="djs.html"
-            >
-              <i class="bi bi-music-note-beamed me-2"></i> More about DJs</a
-            >
+          
+          <div class="col-md-3 d-flex align-items-center justify-content-center reveal-item">
+            <a href="djs.html" class="btn btn-primary btn-lg btn-highlight w-100">
+            <i class="bi bi-music-note-beamed me-2"></i> More about DJs</a>
           </div>
           <!--
           <div class="col-md-6 col-lg-3 reveal-item">
@@ -740,42 +722,41 @@
         </div>
       </div>
     </section>
+
     <!-- SCHEDULE -->
-    <section class="py-6 bg-blend" id="schedule">
+    <section id="schedule" class="py-6 bg-blend">
       <div class="container">
         <h2 class="h1 fw-bold text-center mb-5">Arsenali TM26 Schedule</h2>
+
         <div class="row g-4">
           <!-- grid wrapper -->
           <div class="col-md-6 col-lg-3">
             <div class="timeline-day h-100">
-              <h5 class="mb-3">Thu 30/04</h5>
+              <h5 class="mb-3">Thu 30/04 </h5>
               <h6 class="mb-3">warm-up milonga</h6>
               <ul class="timeline-list">
                 <li class="timeline-item">
                   <div class="time">22:00–02:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="Michal Shevchenko"
-                      class="dj-thumb"
-                      src="img/MichalShevchenko.jpg"
-                    />
+                    <img src="img/MichalShevchenko.jpg" alt="Michal Shevchenko" class="dj-thumb" />
                     <span class="dj-name">Michal Shevchenko</span>
                   </div>
                 </li>
               </ul>
               <h6 class="mb-3">Venue TBA</h6>
               <h6 class="mb-3">Entrance fee: 8€</h6>
-              <div class="d-flex gap-2">
-                <a
-                  class="btn btn-outline-light"
-                  href="#"
-                  onclick="return false;"
-                  target="_blank"
-                  ><i class="bi bi-geo-alt-fill me-2"></i>Directions to venue</a
-                >
-              </div>
+                          <div class="d-flex gap-2">
+         
+              <a
+                href="#" onclick="return false;"
+                target="_blank"
+                class="btn btn-outline-light"
+                ><i class="bi bi-geo-alt-fill me-2"></i>Directions to venue</a
+              >
+            </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="timeline-day h-100">
               <h5 class="mb-3">Fri 01/05</h5>
@@ -783,28 +764,21 @@
                 <li class="timeline-item">
                   <div class="time">16:00–20:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="Mert Emre Üstün"
-                      class="dj-thumb"
-                      src="img/MertEmreÜstün.jpg"
-                    />
+                    <img src="img/MertEmreÜstün.jpg" alt="Mert Emre Üstün" class="dj-thumb" />
                     <span class="dj-name">Mert Emre Üstün</span>
                   </div>
                 </li>
                 <li class="timeline-item">
                   <div class="time">22:00–03:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="Tonia Papadaki"
-                      class="dj-thumb"
-                      src="img/Tonia.jpg"
-                    />
+                    <img src="img/Tonia.jpg" alt="Tonia Papadaki" class="dj-thumb" />
                     <span class="dj-name">Tonia Papadaki</span>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="timeline-day h-100">
               <h5 class="mb-3">Sat 02/05</h5>
@@ -812,28 +786,21 @@
                 <li class="timeline-item">
                   <div class="time">16:00–20:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="Jan Tango"
-                      class="dj-thumb"
-                      src="img/JanTango.jpg"
-                    />
+                    <img src="img/JanTango.jpg" alt="Jan Tango" class="dj-thumb" />
                     <span class="dj-name">Jan Tango</span>
                   </div>
                 </li>
                 <li class="timeline-item">
                   <div class="time">22:00–03:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="Santiago Buonomo "
-                      class="dj-thumb"
-                      src="img/SantiagoBuonomo.jpg"
-                    />
+                    <img src="img/SantiagoBuonomo.jpg" alt="Santiago Buonomo " class="dj-thumb" />
                     <span class="dj-name">Santiago Buonomo </span>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="timeline-day h-100">
               <h5 class="mb-3">Sun 03/05</h5>
@@ -841,43 +808,31 @@
                 <li class="timeline-item">
                   <div class="time">12:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img alt="brunch" class="dj-thumb" src="img/brunch.jpg" />
-                    <span class="dj-name"> Brunch &amp; small talkings</span>
+                    <img src="img/brunch.jpg" alt="brunch" class="dj-thumb" />
+                    <span class="dj-name"> Brunch & small talkings</span>
                   </div>
                 </li>
                 <li class="timeline-item">
                   <div class="time">14:00–18:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="John Niaou"
-                      class="dj-thumb"
-                      src="img/JohnNiaou.jpg"
-                    />
+                    <img src="img/JohnNiaou.jpg" alt="John Niaou" class="dj-thumb" />
                     <span class="dj-name">John Niaou</span>
                   </div>
                 </li>
                 <li class="timeline-item">
                   <div class="time">18:00–22:00</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="Babis Pappas"
-                      class="dj-thumb"
-                      src="img/BabisPappas.jpg"
-                    />
+                    <img src="img/BabisPappas.jpg" alt="Babis Pappas" class="dj-thumb" />
                     <span class="dj-name">Babis Pappas</span>
                   </div>
                 </li>
                 <li class="timeline-item">
                   <div class="time">Following La Cumparsita</div>
                   <div class="content d-flex align-items-center gap-3">
-                    <img
-                      alt="farewell party"
-                      class="dj-thumb"
-                      src="img/party.jpg"
-                    />
+                    <img src="img/party.jpg" alt="farewell party" class="dj-thumb" />
                     <span class="dj-name">Farewell Party</span>
                   </div>
-                </li>
+                </li>                
               </ul>
             </div>
           </div>
@@ -885,12 +840,15 @@
         <!-- /row -->
       </div>
     </section>
+
+
+
     <!-- VENUE -->
-    <section class="py-6 bg-blend" id="venue">
+    <section id="venue" class="py-6 bg-blend">
       <div class="container">
         <div class="row g-5 align-items-start">
           <div class="col-lg-6">
-            <h2 class="h1 fw-bold">Venue &amp; Access</h2>
+            <h2 class="h1 fw-bold">Venue & Access</h2>
             <p class="text-secondary">
               Megalo Arsenali (Center of Mediterranean Architecture), Michail
               Afentoulief, Chania 731 32.
@@ -899,39 +857,34 @@
               <li>• 3' from bus stop • 220 m² wooden floor • Accessible</li>
             </ul>
             <div class="d-flex gap-2">
-              <a
-                class="btn btn-primary"
-                href="https://forms.gle/XjkhJXqHq8LvEnns8"
-                target="_blank"
+              <a href="https://forms.gle/XjkhJXqHq8LvEnns8" target="_blank" class="btn btn-primary"
                 ><i class="bi bi-ticket-perforated me-2"></i>Register</a
               >
               <a
-                *=""
-                *target="_blank"
+                href="https://forms.gle/XjkhJXqHq8LvEnns8" target="_blank"
+                /*target="_blank"*/
                 class="btn btn-outline-light"
-                href="https://forms.gle/XjkhJXqHq8LvEnns8"
-                target="_blank"
                 ><i class="bi bi-geo-alt-fill me-2"></i>Directions</a
               >
             </div>
             <!-- Google Maps Navigation form -->
             <div class="card bg-dark border-secondary rounded-4 shadow-sm mt-4">
               <div class="card-body">
-                <h4 class="card-title mb-2 text-white">Navigate to Venue</h4>
+                <h4 class="card-title mb-2 text-white" >Navigate to Venue</h4>
                 <div class="row g-2 align-items-end">
                   <div class="col-md-8">
                     <label class="form-label small text-secondary"
                       >Your location (optional)</label
                     >
                     <input
-                      class="form-control"
-                      id="gmaps-origin"
-                      placeholder="e.g. Syntagma, Athens"
                       type="text"
+                      id="gmaps-origin"
+                      class="form-control"
+                      placeholder="e.g. Syntagma, Athens"
                     />
                   </div>
                   <div class="col-md-4 d-grid">
-                    <button class="btn btn-primary" id="gmaps-go" type="button">
+                    <button type="button" id="gmaps-go" class="btn btn-primary">
                       Open in Google Maps
                     </button>
                   </div>
@@ -949,131 +902,126 @@
           <div class="col-lg-6">
             <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow">
               <img
-                alt="Venue photo"
-                class="w-100 h-100 object-fit-cover"
                 src="img/arsenali.jpg"
+                class="w-100 h-100 object-fit-cover"
+                alt="Venue photo"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- TICKETS -->
-    <section class="py-6 bg-blend" id="tickets">
-      <div class="container">
-        <h2 class="h1 text-center mb-5">Tickets</h2>
-        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
-          <!-- EARLY BIRD #1 -->
-          <div class="col">
-            <div class="card pricing-card h-100 position-relative early-bird">
-              <span class="ribbon alt">Early Bird</span>
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-2 text-white">Individual</h3>
-                <p class="text-secondary small mb-3">
-                  All afternoon &amp; evening milongas
-                </p>
-                <div class="price mb-3">
-                  <span class="amount text-white">€120</span>
-                  <span class="note text-secondary small"> (until Nov 30)</span>
-                </div>
-                <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+
+
+<!-- TICKETS -->
+<section id="tickets" class="py-6 bg-blend">
+  <div class="container">
+    <h2 class="h1 text-center mb-5">Tickets</h2>
+
+    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+      <!-- EARLY BIRD #1 -->
+      <div class="col">
+        <div class="card pricing-card h-100 position-relative early-bird">
+          <span class="ribbon alt">Early Bird</span>
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Individual</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€120</span>
+              <span class="note text-secondary small"> (until Nov 30)</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
               <li class="mb-1">• Fri 22:00–03:00</li>
               <li class="mb-1">• Sat 22:00–03:00</li>
               <li class="mb-1">• Sun 18:00–22:00</li>
             </ul>-->
-                <!--<a href="#register" class="btn btn-primary w-100 mt-3">Choose</a>-->
-              </div>
-            </div>
+            <!--<a href="#register" class="btn btn-primary w-100 mt-3">Choose</a>-->
           </div>
-          <!-- EARLY BIRD #2 -->
-          <div class="col">
-            <div class="card pricing-card h-100 position-relative early-bird">
-              <span class="ribbon alt">Early Bird</span>
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-2 text-white">Couple</h3>
-                <p class="text-secondary small mb-3">
-                  All afternoon &amp; evening milongas
-                </p>
-                <div class="price mb-3">
-                  <span class="amount text-white">€230</span>
-                  <span class="note text-secondary small"> (until Nov 30)</span>
-                </div>
-                <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+        </div>
+      </div>
+
+      <!-- EARLY BIRD #2 -->
+      <div class="col">
+        <div class="card pricing-card h-100 position-relative early-bird">
+          <span class="ribbon alt">Early Bird</span>
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Couple</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€230</span>
+              <span class="note text-secondary small"> (until Nov 30)</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
               <li class="mb-1">• Thu 22:00–03:00 (Warm-up)</li>
               <li class="mb-1">• Fri + Sat (afternoon & night)</li>
               <li class="mb-1">• Sun Brunch & Farewell</li>
             </ul>-->
-                <!--<a href="#register" class="btn btn-primary w-100 mt-3">Choose</a>-->
-                <p class="text-white">
-                  (Please register separately for each participant -
-                  €115/person)
-                </p>
-              </div>
-            </div>
+           <!--<a href="#register" class="btn btn-primary w-100 mt-3">Choose</a>-->
+           <p class="text-white">(Please register separately for each participant - €115/person)</p>
           </div>
-          <!-- STANDARD #3 -->
-          <div class="col">
-            <div class="card pricing-card h-100">
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-2 text-white">Individual</h3>
-                <p class="text-secondary small mb-3">
-                  All afternoon &amp; evening milongas
-                </p>
-                <div class="price mb-3">
-                  <span class="amount text-white">€140</span>
-                </div>
-                <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+        </div>
+      </div>
+
+      <!-- STANDARD #3 -->
+      <div class="col">
+        <div class="card pricing-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Individual</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€140</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
               <li class="mb-1">• Pick any single night</li>
               <li class="mb-1">• Includes snack bar</li>
             </ul>-->
-                <!--<a href="#register" class="btn btn-outline-light w-100 mt-3">Choose</a>-->
-              </div>
-            </div>
+            <!--<a href="#register" class="btn btn-outline-light w-100 mt-3">Choose</a>-->
           </div>
-          <!-- STANDARD #4 -->
-          <div class="col">
-            <div class="card pricing-card h-100">
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-2 text-white">Couple</h3>
-                <p class="text-secondary small mb-3">
-                  All afternoon &amp; evening milongas
-                </p>
-                <div class="price mb-3">
-                  <span class="amount text-white">€250</span>
-                </div>
-                <!--<ul class="list-unstyled text-secondary small flex-grow-1">
+        </div>
+      </div>
+
+      <!-- STANDARD #4 -->
+      <div class="col">
+        <div class="card pricing-card h-100">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2 text-white">Couple</h3>
+            <p class="text-secondary small mb-3">All afternoon & evening milongas</p>
+            <div class="price mb-3">
+              <span class="amount text-white">€250</span>
+            </div>
+            <!--<ul class="list-unstyled text-secondary small flex-grow-1">
               <li class="mb-1">• Pick Fri/Sat/Sun afternoon</li>
               <li class="mb-1">• Chill vibes & sunny tanda</li>
             </ul>-->
-                <!--<a href="#register" class="btn btn-outline-light w-100 mt-3">Choose</a>-->
-                <p class="text-white">
-                  (Please register separately for each participant- €125/person)
-                </p>
-              </div>
-            </div>
+            <!--<a href="#register" class="btn btn-outline-light w-100 mt-3">Choose</a>-->
+            <p class="text-white">(Please register separately for each participant- €125/person)</p>
           </div>
         </div>
-        <p class="text-center text-secondary small mt-4 mb-0">
-          * Early Bird prices valid until <strong>November 30, 2025</strong>.
-          Regular rates apply afterwards.
-        </p>
       </div>
-      <div class="container text-center">
+
+    </div>
+
+    <p class="text-center text-secondary small mt-4 mb-0">
+      * Early Bird prices valid until <strong>November 30, 2025</strong>. Regular rates apply afterwards.
+    </p>
+  </div>
+        <div class="container text-center">
         <h2 class="h1 fw-bold mb-4">Register</h2>
         <p class="lead text-secondary">
           Registration will open on October 10th, 2025.
         </p>
         <a
-          *=""
-          *target="_blank"
+          href="https://forms.gle/XjkhJXqHq8LvEnns8" target="_blank"
+          /*target="_blank"*/
           class="btn btn-primary btn-lg mt-3"
-          href="https://forms.gle/XjkhJXqHq8LvEnns8"
-          target="_blank"
         >
           <i class="bi bi-pencil-square me-2"></i>Go to Registration Form
         </a>
       </div>
-    </section>
+</section>
+
+
     <!-- REGISTER 
     <section id="register" class="py-6 bg-darker bg-blend">
       <div class="container text-center">
@@ -1090,74 +1038,73 @@
         </a>
       </div>
     </section>-->
-    <!-- PHOTOGRAPHY & VIDEO -->
-    <section class="py-6 section-accent" id="media-team">
-      <div class="container">
-        <h2 class="h1 text-center mb-5">Photography &amp; Video</h2>
-        <div class="row g-4 justify-content-center">
-          <!-- Photographer -->
-          <div class="col-md-5">
-            <div class="card bg-dark border-0 shadow-sm h-100 text-center">
-              <div class="media-figure">
-                <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-                  <img
-                    alt="Photographer"
-                    class="w-100 h-100"
-                    src="img/antonaros.jpg"
-                    style="object-fit: cover; object-position: top"
-                  />
-                  <div class="dj-overlay">
-                    <p>Capturing the essence of every tanda</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title mb-1 text-white">Antonis Antonaros</h5>
-                <p class="text-secondary small">Official Photographer</p>
-                <div class="d-flex justify-content-center gap-3 mt-2">
-                  <a
-                    class="text-light"
-                    href="https://www.facebook.com/antonis.antonaros.1"
-                  >
-                    <i class="bi bi-facebook fs-4"></i>
-                  </a>
-                </div>
+
+<!-- PHOTOGRAPHY & VIDEO -->
+<section id="media-team" class="py-6 section-accent">
+  <div class="container">
+    <h2 class="h1 text-center mb-5">Photography & Video</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Photographer -->
+      <div class="col-md-5">
+        <div class="card bg-dark border-0 shadow-sm h-100 text-center">
+          <div class="media-figure">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+              <img
+                src="img/antonaros.jpg"
+                class="w-100 h-100"
+                style="object-fit: cover; object-position: top;"
+                alt="Photographer"
+              />
+              <div class="dj-overlay">
+                <p>Capturing the essence of every tanda</p>
               </div>
             </div>
           </div>
-          <!-- Videographer -->
-          <div class="col-md-5">
-            <div class="card bg-dark border-0 shadow-sm h-100 text-center">
-              <div class="media-figure">
-                <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-                  <img
-                    alt="Videographer"
-                    class="w-100 h-100"
-                    src="img/kadoglou.jpg"
-                    style="object-fit: cover; object-position: 50% 35%"
-                  />
-                  <div class="dj-overlay">
-                    <p>Every embrace on film</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title mb-1 text-white">Alexis Kadoglou</h5>
-                <p class="text-secondary small">Official Videographer</p>
-                <div class="d-flex justify-content-center gap-3 mt-2">
-                  <a
-                    class="text-light"
-                    href="https://www.facebook.com/alexis.kadoglou.tangofilmmaker"
-                  >
-                    <i class="bi bi-facebook fs-4"></i>
-                  </a>
-                </div>
-              </div>
+          <div class="card-body">
+            <h5 class="card-title mb-1 text-white">Antonis Antonaros</h5>
+            <p class="text-secondary small">Official Photographer</p>
+            <div class="d-flex justify-content-center gap-3 mt-2">
+              <a href="https://www.facebook.com/antonis.antonaros.1" class="text-light">
+                <i class="bi bi-facebook fs-4"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Videographer -->
+      <div class="col-md-5">
+        <div class="card bg-dark border-0 shadow-sm h-100 text-center">
+          <div class="media-figure">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+              <img
+                src="img/kadoglou.jpg"
+                class="w-100 h-100"
+                style="object-fit: cover; object-position: 50% 35%;"
+                alt="Videographer"
+              />
+              <div class="dj-overlay">
+                <p>Every embrace on film</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-1 text-white">Alexis Kadoglou</h5>
+            <p class="text-secondary small">Official Videographer</p>
+            <div class="d-flex justify-content-center gap-3 mt-2">
+              <a href="https://www.facebook.com/alexis.kadoglou.tangofilmmaker" class="text-light">
+                <i class="bi bi-facebook fs-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <!-- SPONSORS 
     <section id="sponsors" class="py-6 bg-darker bg-blend">
       <div class="container text-center">
@@ -1194,6 +1141,7 @@
         </div>
       </div>
     </section>-->
+
     <footer class="py-5 border-top border-secondary">
       <div
         class="container d-flex flex-column flex-md-row align-items-center justify-content-between small text-light"
@@ -1209,34 +1157,29 @@
           <!--<a href="faq.html" class="link-light text-decoration-none me-3"
             >FAQ</a
           >-->
-          <a class="link-light text-decoration-none me-3" href="contact.html"
+          <a href="contact.html" class="link-light text-decoration-none me-3"
             >Contact</a
           >
-          <a class="link-light text-decoration-none me-3" href="terms.html"
+          <a href="terms.html" class="link-light text-decoration-none me-3"
             >Terms &amp; Conditions</a
           >
-          <a class="link-light text-decoration-none me-4" href="gdpr.html"
+          <a href="gdpr.html" class="link-light text-decoration-none me-4"
             >GDPR</a
           >
           <!-- Social -->
-          <a
-            aria-label="Facebook"
-            class="text-light me-3"
-            href="https://www.facebook.com/people/Arsenali-Tango-Marathon/61553993340931/"
+          <a href="https://www.facebook.com/people/Arsenali-Tango-Marathon/61553993340931/" class="text-light me-3" aria-label="Facebook"
             ><i class="bi bi-facebook fs-5"></i
           ></a>
           <!--<a href="#" class="text-light me-3" aria-label="Instagram"
             ><i class="bi bi-instagram fs-5"></i
           ></a>-->
-          <a
-            aria-label="YouTube"
-            class="text-light"
-            href="https://www.youtube.com/@TangueriaChania"
+          <a href="https://www.youtube.com/@TangueriaChania" class="text-light" aria-label="YouTube"
             ><i class="bi bi-youtube fs-5"></i
           ></a>
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Navbar solid on scroll
@@ -1295,12 +1238,14 @@
         });
       })();
     </script>
+
     <a
-      class="back-to-top d-flex align-items-center justify-content-center"
       href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
       style="display: none"
       ><i class="bi bi-arrow-up"></i
     ></a>
+
     <script>
       (function () {
         const items = document.querySelectorAll("#djs .reveal-item");
@@ -1319,6 +1264,7 @@
         items.forEach((el) => io.observe(el));
       })();
     </script>
+
     <script>
       (function () {
         const btt = document.querySelector(".back-to-top");
@@ -1346,66 +1292,6 @@
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
       })();
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function slugify(str) {
-          return str
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^a-zA-Z0-9\s-]/g, "")
-            .trim()
-            .replace(/\s+/g, "-")
-            .toLowerCase();
-        }
-        const schedule = document.querySelector("#schedule");
-        if (!schedule) return;
-        const contents = schedule.querySelectorAll(".timeline-list .content");
-        contents.forEach(function (content) {
-          // Try to find a probable name element
-          let nameEl = content.querySelector(
-            ".dj-name, .title, h5, h4, strong, span, p"
-          );
-          if (!nameEl) return;
-          let name = (nameEl.textContent || "").trim();
-          if (!name || /brunch|farewell|small talk/i.test(name)) return;
-
-          // Try to find an image near the name
-          let img = content.querySelector("img");
-          // If already linked, just ensure classes/href
-          let existingA = content.querySelector("a");
-          const href = "djs.html#" + slugify(name);
-
-          if (existingA) {
-            existingA.classList.add("dj-link");
-            existingA.setAttribute("href", href);
-            // Ensure name has class for hover effect
-            nameEl.classList.add("dj-name");
-            if (img && !existingA.contains(img)) {
-              existingA.insertBefore(img, existingA.firstChild);
-            }
-            if (!existingA.contains(nameEl)) {
-              existingA.appendChild(nameEl);
-            }
-            return;
-          }
-
-          // Create link and move nodes
-          const a = document.createElement("a");
-          a.className = "dj-link";
-          a.setAttribute("href", href);
-
-          // Move img (if exists) and the name element into the link
-          if (img) {
-            a.appendChild(img);
-          }
-          nameEl.classList.add("dj-name");
-          a.appendChild(nameEl);
-
-          // Put the link inside content (prepend)
-          content.insertBefore(a, content.firstChild);
-        });
-      });
     </script>
   </body>
 </html>
