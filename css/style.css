@@ -820,3 +820,234 @@ html { scroll-padding-top: 72px; } /* adjust to your exact navbar height */
 
 article.card { position: relative; overflow: visible; }
 article.card.dj-target-flash { z-index: 10; }
+
+
+
+
+/* Crew & Extras Section */
+.extras-section {
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #fff 0%, #f8f1f6 100%);
+}
+
+.extras-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.extras-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.extras-header h2 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+  color: #a2528c;
+}
+
+.extras-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.featured-crew {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 35px;
+}
+
+.crew-card,
+.extra-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(162, 82, 140, 0.12);
+}
+
+.crew-card.featured {
+  text-align: center;
+  border-top: 5px solid #a2528c;
+}
+
+.crew-icon,
+.extra-icon {
+  font-size: 2.3rem;
+  margin-bottom: 14px;
+}
+
+.crew-card h3,
+.extra-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  color: #222;
+}
+
+.crew-card h4,
+.extra-card h4 {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #a2528c;
+}
+
+.crew-tagline {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.crew-card p,
+.extra-card p {
+  color: #444;
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.small-note {
+  font-size: 0.93rem;
+  color: #666;
+}
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.extra-card ul {
+  padding-left: 18px;
+  margin: 14px 0;
+  color: #444;
+  line-height: 1.7;
+}
+
+.extra-card li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .extras-section {
+    padding: 65px 18px;
+  }
+
+  .featured-crew,
+  .extras-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .extras-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .crew-card,
+  .extra-card {
+    padding: 26px 22px;
+  }
+}
+
+
+
+/* EXTRAS POLISH */
+#extras .card {
+  text-align: center;
+}
+
+#extras .card h5 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #a2528c;
+  margin-bottom: 10px;
+}
+
+#extras .card p {
+  text-align: center;
+}
+
+#extras .card ul {
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto 10px auto;
+}
+
+#extras .card li {
+  text-align: left;
+}
+
+#extras .card .bi,
+#extras .card h5::before {
+  font-size: 1.4rem;
+}
+
+/* λίγο πιο premium spacing */
+#extras .card-body {
+  padding: 28px 22px;
+}
+
+/* hover effect (προαιρετικό αλλά πολύ ωραίο) */
+#extras .card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s ease;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+
+
+/* EXTRAS VISUAL IMPROVEMENTS */
+
+/* πιο soft background μόνο για extras */
+#extras .extra-highlight {
+  background: rgba(162, 82, 140, 0.08); /* subtle pink */
+  border: 1px solid rgba(162, 82, 140, 0.15);
+  border-radius: 16px;
+}
+
+/* τίτλοι πιο eye-catching */
+#extras .card h5 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* bullets styling */
+#extras ul.event-details {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+#extras ul.event-details li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+#extras ul.event-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #a2528c;
+  font-size: 1.2rem;
+}
+
+/* μικρό hover polish */
+#extras .card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s ease;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+#extras .card.extra-highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(162, 82, 140, 0.18) 0%,
+    rgba(162, 82, 140, 0.08) 100%
+  ) !important;
+
+  border: 1px solid rgba(162, 82, 140, 0.25);
+}
