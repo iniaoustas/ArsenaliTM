@@ -41,175 +41,6 @@
     />
     <!-- Styles -->
     <link href="css/style.css?v=20251019-2" rel="stylesheet" />
-    <style>
-      /* Countdown live reveal */
-      .countdown-live-wrapper {
-        width: 100%;
-      }
-
-      .live-card {
-        position: relative;
-        width: min(720px, 100%);
-        margin: 0 auto;
-        padding: 2.1rem 1.4rem;
-        border-radius: 28px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        background:
-          radial-gradient(
-            circle at 20% 0%,
-            rgba(162, 82, 140, 0.55),
-            transparent 36%
-          ),
-          radial-gradient(
-            circle at 85% 15%,
-            rgba(92, 158, 173, 0.5),
-            transparent 34%
-          ),
-          rgba(8, 8, 12, 0.78);
-        box-shadow:
-          0 0 30px rgba(162, 82, 140, 0.38),
-          0 0 70px rgba(92, 158, 173, 0.22),
-          inset 0 0 35px rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(10px);
-        animation:
-          liveReveal 0.9s ease-out both,
-          livePulse 3.2s ease-in-out infinite;
-      }
-
-      .live-card::before {
-        content: "";
-        position: absolute;
-        inset: -60%;
-        background: conic-gradient(
-          from 90deg,
-          transparent,
-          rgba(255, 255, 255, 0.18),
-          transparent,
-          rgba(162, 82, 140, 0.28),
-          transparent
-        );
-        animation: liveSpin 8s linear infinite;
-        pointer-events: none;
-      }
-
-      .live-card::after {
-        content: "";
-        position: absolute;
-        inset: 2px;
-        border-radius: 26px;
-        background: rgba(8, 8, 12, 0.38);
-        pointer-events: none;
-      }
-
-      .live-card > * {
-        position: relative;
-        z-index: 1;
-      }
-
-      .live-kicker {
-        text-transform: uppercase;
-        letter-spacing: 0.24em;
-        font-size: 0.78rem;
-        color: rgba(255, 255, 255, 0.72);
-        margin-bottom: 0.6rem;
-      }
-
-      .live-title {
-        margin: 0;
-        font-size: clamp(2.7rem, 8vw, 5.8rem);
-        line-height: 0.95;
-        font-weight: 900;
-        letter-spacing: 0.04em;
-        color: #fff;
-        text-shadow:
-          0 0 12px rgba(255, 255, 255, 0.75),
-          0 0 30px rgba(162, 82, 140, 0.9),
-          0 0 54px rgba(92, 158, 173, 0.72);
-        animation: liveTextGlow 2.2s ease-in-out infinite alternate;
-      }
-
-      .live-divider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.8rem;
-        margin: 1.1rem auto 0.9rem;
-        color: #fff;
-      }
-
-      .live-divider span {
-        width: min(110px, 22vw);
-        height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.85),
-          transparent
-        );
-      }
-
-      .live-subtitle {
-        margin: 0 0 1.35rem;
-        color: rgba(255, 255, 255, 0.78);
-        font-size: 1.08rem;
-      }
-
-      .live-btn {
-        border-radius: 999px;
-        box-shadow: 0 0 22px rgba(162, 82, 140, 0.45);
-      }
-
-      @keyframes liveReveal {
-        from {
-          opacity: 0;
-          transform: translateY(18px) scale(0.96);
-          filter: blur(6px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-          filter: blur(0);
-        }
-      }
-
-      @keyframes livePulse {
-        0%,
-        100% {
-          box-shadow:
-            0 0 30px rgba(162, 82, 140, 0.38),
-            0 0 70px rgba(92, 158, 173, 0.22),
-            inset 0 0 35px rgba(255, 255, 255, 0.04);
-        }
-        50% {
-          box-shadow:
-            0 0 45px rgba(162, 82, 140, 0.62),
-            0 0 95px rgba(92, 158, 173, 0.38),
-            inset 0 0 45px rgba(255, 255, 255, 0.07);
-        }
-      }
-
-      @keyframes liveSpin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes liveTextGlow {
-        from {
-          text-shadow:
-            0 0 10px rgba(255, 255, 255, 0.65),
-            0 0 25px rgba(162, 82, 140, 0.75),
-            0 0 48px rgba(92, 158, 173, 0.55);
-        }
-        to {
-          text-shadow:
-            0 0 16px rgba(255, 255, 255, 0.95),
-            0 0 38px rgba(162, 82, 140, 1),
-            0 0 70px rgba(92, 158, 173, 0.9);
-        }
-      }
-    </style>
   </head>
   <body class="bg-dark text-light">
     <!-- NAV -->
@@ -940,16 +771,17 @@
                   </div>
                 </li>
               </ul>
-              <h6 class="mb-3">Venue TBA</h6>
-              <h6 class="mb-3">Entrance fee: 8€</h6>
+              <h6 class="mb-3">Grand Arsenali</h6>
+              <h6 class="mb-3">Entrance fee: 12€</h6>
               <div class="d-flex gap-2">
                 <a
                   class="btn btn-outline-light"
-                  href="#"
-                  onclick="return false;"
+                  href="https://www.google.com/maps?q=35.51842951050936,24.019857524363275"
                   target="_blank"
-                  ><i class="bi bi-geo-alt-fill me-2"></i>Directions to venue</a
                 >
+                  <i class="bi bi-geo-alt-fill me-2"></i>
+                  Directions to venue
+                </a>
               </div>
             </div>
           </div>
@@ -1069,7 +901,7 @@
           <div class="col-lg-6">
             <h2 class="h1 fw-bold">Venue &amp; Access</h2>
             <p class="text-secondary">
-              Megalo Arsenali (Center of Mediterranean Architecture), Michail
+              Grand Arsenali (Center of Mediterranean Architecture), Michail
               Afentoulief, Chania 731 32.
             </p>
             <ul class="list-unstyled small text-secondary">
@@ -1082,14 +914,14 @@
                 target="_blank"
                 ><i class="bi bi-ticket-perforated me-2"></i>Register</a
               >
-              <a
+              <!-- <a
                 *=""
                 *target="_blank"
                 class="btn btn-outline-light"
                 href="https://forms.gle/XjkhJXqHq8LvEnns8"
                 target="_blank"
                 ><i class="bi bi-geo-alt-fill me-2"></i>Directions</a
-              >
+              > -->
             </div>
             <!-- Google Maps Navigation form -->
             <div class="card bg-dark border-secondary rounded-4 shadow-sm mt-4">
@@ -1473,7 +1305,7 @@
       </div>
     </section>
 
-    <!--SPONSORS-->
+    <!-- SPONSORS -->
     <section id="sponsors" class="py-6 bg-darker bg-blend">
       <div class="container text-center">
         <h2 class="h1 fw-bold mb-5">Our Sponsors</h2>
@@ -1565,6 +1397,7 @@
       </div>
     </section>
 
+    
     <footer class="py-5 border-top border-secondary">
       <div
         class="container d-flex flex-column flex-md-row align-items-center justify-content-between small text-light"
@@ -1629,40 +1462,12 @@
       // Countdown
       const target = new Date("2026-05-01T16:00:00+03:00").getTime();
       const el = document.getElementById("countdown");
-
       function pad(n) {
         return String(n).padStart(2, "0");
       }
-
-      function showLiveMessage() {
-        el.classList.remove("gap-4");
-        el.classList.add("countdown-live-wrapper");
-
-        el.innerHTML = `
-          <div class="live-card" role="status" aria-live="polite">
-            <div class="live-kicker">Arsenali Tango Marathon 2026</div>
-            <h2 class="live-title">WE ARE LIVE!</h2>
-            <div class="live-divider">
-              <span></span><i class="bi bi-music-note-beamed"></i><span></span>
-            </div>
-            <p class="live-subtitle">The music is on. The abrazo begins.</p>
-            <a class="btn btn-primary btn-lg live-btn" href="#schedule">
-              <i class="bi bi-calendar-heart me-2"></i>See what’s happening now
-            </a>
-          </div>
-        `;
-      }
-
-      function updateCountdown() {
+      setInterval(() => {
         const now = Date.now();
-        let diff = target - now;
-
-        if (diff <= 0) {
-          clearInterval(countdownInterval);
-          showLiveMessage();
-          return;
-        }
-
+        let diff = Math.max(0, target - now);
         const d = Math.floor(diff / (1000 * 60 * 60 * 24));
         diff -= d * 24 * 60 * 60 * 1000;
         const h = Math.floor(diff / (1000 * 60 * 60));
@@ -1670,15 +1475,11 @@
         const m = Math.floor(diff / (1000 * 60));
         diff -= m * 60 * 1000;
         const s = Math.floor(diff / 1000);
-
         el.querySelector('[data-key="days"]').textContent = pad(d);
         el.querySelector('[data-key="hours"]').textContent = pad(h);
         el.querySelector('[data-key="minutes"]').textContent = pad(m);
         el.querySelector('[data-key="seconds"]').textContent = pad(s);
-      }
-
-      const countdownInterval = setInterval(updateCountdown, 1000);
-      updateCountdown();
+      }, 1000);
 
       // Google Maps nav
       (function () {
