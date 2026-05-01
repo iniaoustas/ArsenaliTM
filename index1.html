@@ -1445,14 +1445,34 @@
       })();
 
       // Countdown
-      const target = new Date("2026-05-01T18:00:00+03:00").getTime();
+      // Countdown
+      const target = new Date("2026-05-01T09:20:00+03:00").getTime();
       const el = document.getElementById("countdown");
+
       function pad(n) {
         return String(n).padStart(2, "0");
       }
-      setInterval(() => {
+
+      const interval = setInterval(() => {
         const now = Date.now();
-        let diff = Math.max(0, target - now);
+        let diff = target - now;
+
+        // 👉 όταν τελειώσει
+        if (diff <= 0) {
+          clearInterval(interval);
+
+          el.innerHTML = `
+      <div class="text-center w-100">
+        <h2 class="fw-bold text-white" style="font-size: 2.5rem; letter-spacing:2px;">
+          ✨ WE ARE LIVE! ✨
+        </h2>
+        <p class="text-secondary mt-2">Let the marathon begin</p>
+      </div>
+    `;
+
+          return;
+        }
+
         const d = Math.floor(diff / (1000 * 60 * 60 * 24));
         diff -= d * 24 * 60 * 60 * 1000;
         const h = Math.floor(diff / (1000 * 60 * 60));
@@ -1460,6 +1480,7 @@
         const m = Math.floor(diff / (1000 * 60));
         diff -= m * 60 * 1000;
         const s = Math.floor(diff / 1000);
+
         el.querySelector('[data-key="days"]').textContent = pad(d);
         el.querySelector('[data-key="hours"]').textContent = pad(h);
         el.querySelector('[data-key="minutes"]').textContent = pad(m);
