@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Arsenali Tango Marathon</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --arsenali-blue: #5c9ead;
+      --arsenali-pink: #a2528c;
+      --dark: #101216;
+      --light: #fff8f3;
+      --muted: rgba(255,255,255,0.78);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #fff;
+      background: var(--dark);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; }
+
+    .page-wrap {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background:
+        linear-gradient(135deg, rgba(92,158,173,0.92), rgba(162,82,140,0.88)),
+        url("img/cover.jpg") center/cover no-repeat;
+    }
+
+    .page-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.16), transparent 26%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.12), transparent 30%),
+        rgba(0,0,0,0.28);
+      pointer-events: none;
+    }
+
+    .navbar {
+      position: relative;
+      z-index: 2;
+      padding: 22px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar-brand {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #fff !important;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.88) !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover { color: #fff !important; }
+
+    main {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 80px 0 60px;
+    }
+
+    .hero-card {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+      padding: clamp(36px, 6vw, 72px);
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(16,18,22,0.48);
+      border-radius: 34px;
+      box-shadow: 0 28px 80px rgba(0,0,0,0.35);
+      backdrop-filter: blur(14px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 11vw, 9rem);
+      line-height: 0.88;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .subtitle {
+      margin: 18px auto 0;
+      max-width: 760px;
+      font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .message-box {
+      margin: 34px auto 0;
+      max-width: 760px;
+      padding: 26px;
+      border-radius: 26px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.92);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .tm2027 {
+      margin-top: 34px;
+      display: inline-block;
+      padding: 18px 28px;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--arsenali-pink), var(--arsenali-blue));
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .socials a {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.26);
+      background: rgba(255,255,255,0.12);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.22);
+    }
+
+    .footer {
+      position: relative;
+      z-index: 2;
+      padding: 26px 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+
+    .footer a { color: rgba(255,255,255,0.86); }
+
+    @media (max-width: 576px) {
+      .hero-card { border-radius: 24px; }
+      .message-box { padding: 20px; }
+      .navbar-brand { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrap">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Arsenali TM26</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/arsenalitangomarathon" target="_blank" rel="noopener">Facebook</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/arsenalitangomarathon" target="_blank" rel="noopener">Instagram</a></li>
+            <li class="nav-item"><a class="nav-link" href="mailto:arsenalitangomarathon@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <section class="hero-card">
+          <div class="eyebrow"><i class="bi bi-heart-fill"></i> Arsenali Tango Marathon 2026</div>
+          <h1>Thank You</h1>
+          <p class="subtitle">
+            The last tanda has played, the embraces remain, and our hearts are full.
+          </p>
+
+          <div class="message-box">
+            To all our dancers, DJs, artists, volunteers, friends and supporters — thank you for being part of this year’s Arsenali Tango Marathon in Chania.
+            <br><br>
+            Your energy, warmth and passion turned these days into a beautiful celebration of tango, connection and community.
+          </div>
+
+          <div class="tm2027">
+            Stay tuned for Arsenali Tango Marathon 2027
+          </div>
+
+          <div class="socials" aria-label="Social links">
+            <a href="https://www.facebook.com/arsenalitangomarathon" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/arsenalitangomarathon" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="mailto:arsenalitangomarathon@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start">
+        <div>© Arsenali Tango Marathon — All rights reserved.</div>
+        <div><a href="mailto:arsenalitangomarathon@gmail.com">arsenalitangomarathon@gmail.com</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

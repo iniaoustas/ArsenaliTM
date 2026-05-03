@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — Arsenali Tango Marathon</title>
+  <meta name="description" content="Thank you for being part of Arsenali Tango Marathon 2026. Stay tuned for Arsenali Tango Marathon 2027." />
+
+  <!-- Existing visual stack / fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --arsenali-blue:#5c9ead;
+      --arsenali-pink:#a2528c;
+      --dark:#08070b;
+      --light:#fff8f4;
+      --glass:rgba(255,255,255,.10);
+      --glass-border:rgba(255,255,255,.22);
+    }
+
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"Fredoka", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--light);
+      background:var(--dark);
+      overflow-x:hidden;
+    }
+
+    .navbar{
+      background:linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,.08));
+      backdrop-filter:blur(8px);
+      z-index:20;
+    }
+    .navbar-brand,
+    .nav-link{
+      color:#fff !important;
+      letter-spacing:.04em;
+    }
+    .navbar-brand{
+      font-family:"Bebas Neue", sans-serif;
+      font-size:1.75rem;
+    }
+    .nav-link{
+      font-weight:500;
+      opacity:.92;
+    }
+    .nav-link:hover{opacity:1;color:#fff !important;}
+
+    .hero-ended{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      isolation:isolate;
+      overflow:hidden;
+      padding:7rem 0 4rem;
+    }
+
+    .hero-video,
+    .hero-fallback{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:-4;
+    }
+    .hero-fallback{z-index:-5;}
+
+    .hero-ended::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-3;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(162,82,140,.48), transparent 34%),
+        radial-gradient(circle at 80% 55%, rgba(92,158,173,.42), transparent 40%),
+        linear-gradient(90deg, rgba(0,0,0,.84), rgba(0,0,0,.56), rgba(0,0,0,.76));
+    }
+    .hero-ended::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:rgba(0,0,0,.22);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      padding:.55rem .95rem;
+      border:1px solid var(--glass-border);
+      border-radius:999px;
+      background:rgba(0,0,0,.28);
+      color:#fff;
+      font-weight:600;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:.82rem;
+      margin-bottom:1.2rem;
+    }
+
+    h1{
+      font-family:"Bebas Neue", sans-serif;
+      font-size:clamp(4.2rem, 13vw, 10.5rem);
+      line-height:.86;
+      letter-spacing:.02em;
+      margin:0;
+      text-shadow:0 10px 40px rgba(0,0,0,.45);
+    }
+    .hero-subtitle{
+      font-size:clamp(1.35rem, 3.2vw, 2.45rem);
+      font-weight:600;
+      margin:.8rem 0 1rem;
+      max-width:860px;
+    }
+    .hero-text{
+      font-size:clamp(1.02rem, 1.5vw, 1.22rem);
+      line-height:1.7;
+      max-width:740px;
+      color:rgba(255,255,255,.88);
+      margin-bottom:2rem;
+    }
+
+    .year-card{
+      display:inline-flex;
+      flex-direction:column;
+      justify-content:center;
+      min-width:min(100%, 520px);
+      padding:1.35rem 1.5rem;
+      border-radius:28px;
+      background:linear-gradient(135deg, rgba(92,158,173,.24), rgba(162,82,140,.26));
+      border:1px solid var(--glass-border);
+      box-shadow:0 24px 80px rgba(0,0,0,.30);
+      backdrop-filter:blur(16px);
+    }
+    .year-card span{
+      font-size:.95rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:rgba(255,255,255,.78);
+      font-weight:700;
+    }
+    .year-card strong{
+      font-family:"Bebas Neue", sans-serif;
+      font-size:clamp(2.8rem, 7vw, 5rem);
+      line-height:1;
+      letter-spacing:.03em;
+    }
+
+    .btn-arsenali{
+      border:0;
+      color:#fff;
+      font-weight:700;
+      border-radius:999px;
+      padding:.9rem 1.35rem;
+      background:linear-gradient(135deg, var(--arsenali-blue), var(--arsenali-pink));
+      box-shadow:0 18px 45px rgba(0,0,0,.28);
+      text-decoration:none;
+    }
+    .btn-arsenali:hover{color:#fff;filter:brightness(1.07);}
+    .btn-outline-soft{
+      border:1px solid rgba(255,255,255,.42);
+      color:#fff;
+      font-weight:700;
+      border-radius:999px;
+      padding:.9rem 1.35rem;
+      background:rgba(255,255,255,.08);
+      text-decoration:none;
+      backdrop-filter:blur(10px);
+    }
+    .btn-outline-soft:hover{color:#fff;background:rgba(255,255,255,.16);}
+
+    .thank-section{
+      position:relative;
+      background:#fff8f4;
+      color:#241725;
+      padding:5rem 0;
+    }
+    .thank-section h2{
+      font-family:"Bebas Neue", sans-serif;
+      font-size:clamp(2.6rem, 6vw, 5rem);
+      color:#241725;
+      margin-bottom:.8rem;
+    }
+    .thank-card{
+      height:100%;
+      border:0;
+      border-radius:28px;
+      padding:1.75rem;
+      background:#fff;
+      box-shadow:0 18px 50px rgba(36,23,37,.09);
+    }
+    .thank-card i{
+      width:48px;
+      height:48px;
+      display:inline-grid;
+      place-items:center;
+      border-radius:999px;
+      color:#fff;
+      margin-bottom:1rem;
+      background:linear-gradient(135deg, var(--arsenali-blue), var(--arsenali-pink));
+      font-size:1.35rem;
+    }
+    .thank-card h3{
+      font-size:1.25rem;
+      font-weight:700;
+      margin-bottom:.6rem;
+    }
+    .thank-card p{color:#5a505d;margin:0;line-height:1.65;}
+
+    footer{
+      background:#08070b;
+      color:rgba(255,255,255,.70);
+      padding:2rem 0;
+      font-size:.95rem;
+    }
+    footer a{color:#fff;text-decoration:none;}
+
+    @media (max-width:767.98px){
+      .hero-ended{padding-top:6rem;}
+      .year-card{min-width:100%;}
+      .d-flex.cta-wrap{flex-direction:column;align-items:stretch !important;}
+      .btn-arsenali,.btn-outline-soft{text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Arsenali TM</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#thank-you">Thank you</a></li>
+          <li class="nav-item"><a class="nav-link" href="#next">2027</a></li>
+          <li class="nav-item"><a class="nav-link" href="mailto:arsenalitangomarathon@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-ended" id="next">
+    <!-- Keep the existing background video file path here. If your current site uses another filename, change only the src below. -->
+    <video class="hero-video" autoplay muted loop playsinline poster="img/cover.jpg">
+      <source src="video/background.mp4" type="video/mp4" />
+      <source src="assets/video/background.mp4" type="video/mp4" />
+    </video>
+    <img class="hero-fallback" src="img/cover.jpg" alt="Arsenali Tango Marathon background" />
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 col-xl-8">
+          <div class="eyebrow"><i class="bi bi-heart-fill"></i> Arsenali Tango Marathon 2026</div>
+          <h1>Thank you</h1>
+          <div class="hero-subtitle">The embrace continues.</div>
+          <p class="hero-text">
+            Arsenali Tango Marathon 2026 has come to an end, and our hearts are full.
+            Thank you to every dancer, DJ, artist, volunteer, sponsor and friend who filled Megalo Arsenali with music, warmth and unforgettable moments.
+          </p>
+
+          <div class="year-card mb-4">
+            <span>Stay tuned for</span>
+            <strong>Arsenali Tango Marathon 2027</strong>
+          </div>
+
+          <div class="d-flex cta-wrap gap-3 align-items-center">
+            <a class="btn-arsenali" href="https://www.facebook.com/arsenalitangomarathon" target="_blank" rel="noopener">
+              <i class="bi bi-facebook me-2"></i>Follow our news
+            </a>
+            <a class="btn-outline-soft" href="mailto:arsenalitangomarathon@gmail.com">
+              <i class="bi bi-envelope-heart me-2"></i>Contact us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="thank-section" id="thank-you">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-8">
+          <h2>Until we meet again</h2>
+          <p class="lead mb-0">
+            Four days of tango, connection and shared energy in Chania — carried by the people who made it possible.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="thank-card">
+            <i class="bi bi-music-note-beamed"></i>
+            <h3>To our DJs</h3>
+            <p>Thank you for shaping the nights and guiding the dance floor with tandas full of feeling.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thank-card">
+            <i class="bi bi-people-fill"></i>
+            <h3>To our dancers</h3>
+            <p>Thank you for travelling, dancing, smiling and bringing your unique energy to the marathon.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thank-card">
+            <i class="bi bi-stars"></i>
+            <h3>To our crew & supporters</h3>
+            <p>Thank you for every detail, every helping hand and every moment behind the scenes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <div>© Arsenali Tango Marathon — All rights reserved.</div>
+      <div class="d-flex gap-3">
+        <a href="mailto:arsenalitangomarathon@gmail.com">Contact</a>
+        <a href="https://www.facebook.com/arsenalitangomarathon" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
